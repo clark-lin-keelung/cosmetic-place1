@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head><script type='text/javascript' nonce='JeizrZBsL6tBhjnp+suj8Q==' src='https://contribution.usercontent.google.com/Qb222QRxzPgAJqHINWG_foB9N-ba9BvL502QOOW7VadJ_AaB9XZ5yzFK1CMjMBse5-uuG29USkIP-4ocqwNOJM4HbmziuVX7mimAbzXh-WLiU4fcOEDsmUlAc7aJrDZzJLnoLhZDAPNH4-KvMsUQ96QtVp-ZbsX99sCvro7nAR-2RaaezX5E6thcmaXT-jduJRaV_IiJWV08PzhGUGSgr0bM_7kunxqkmrTawlTxOAbQy81Rg30pN8-d5yyPYFNnA3QOJyy0uA-6uT9FHfR9BKa4k5cpHYaoUGl3BHElrdEMWF9fEMDNrIy7O7q-kb7mRCYvyQAjmmWDi1repwQUZwDB40fh0sN2DjmZc3fGMJX3bFrfbsDpvBkhWv90LaEVZzAzQqvMpUvS9Rxj7PcVrEFx7vcKL1UffMmdsPejAfzvwwO7JF23vfK1NgfJY95EkZ6oQd08ru4D161Qm81gcV1Sm-_djAup_2a8_mKAhH9fxwPJK_73xuMkXP7tPnpbPLRafvxEp7bNfqgvRHnHSoN54Y0Y-5ZNz1Prp-0ceRrjsGCeR9TPVR2OhafiXCpTgk305G4Um-Igpe7G0xMfKUlXL5gvC3ObMkCm_ZLg6h2KCngoqtwcDxDswojlx9gdq8RRpfj-Sp8Vz7NJigcejs-lkn8dgtPPD8DjVrehGXKfU0k9UPVWmFkHViq1fBAQS3BMH4dDRZ5aEd5YUY3O2meqUiPxM5xs1FqQEbjAM0lcrSE'></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>美妝品牌通路拓荒戰｜Ch10 行銷通路與實體運配</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<!-- Firebase SDK (Compat for easy single-file usage) -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: linear-gradient(135deg, #fff1f5 0%, #fce7f3 50%, #f3e8ff 100%);
+    min-height: 100vh;
+    color: #1f2937;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 114, 182, 0.25);
+    box-shadow: 0 10px 25px -5px rgba(219, 39, 119, 0.1), 0 8px 10px -6px rgba(219, 39, 119, 0.05);
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    transition: all 0.2s ease;
+  }
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.35);
+  }
+  .option-card {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .option-card:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: #ec4899;
+    background-color: #fdf2f8;
+  }
+  .pulse-event {
+    animation: pulseGlow 2s infinite;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
+  }
+  .rank-1 { background: linear-gradient(135deg, #fef08a 0%, #fde047 100%); border-color: #eab308; }
+  .rank-2 { background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-color: #94a3b8; }
+  .rank-3 { background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%); border-color: #f97316; }
+
+  @keyframes noteFloat {
+    0%, 100% { transform: translateY(0px) rotate(-4deg); }
+    50% { transform: translateY(-3px) rotate(4deg); }
+  }
+  .music-playing-icon {
+    display: inline-block;
+    animation: noteFloat 1.4s ease-in-out infinite;
+  }
+</style>
+</head>
+<body class="antialiased selection:bg-pink-200">
+
+<div id="app" class="max-w-7xl mx-auto px-4 py-5">
+  <!-- Top Header -->
+  <header class="flex flex-wrap items-center justify-between gap-4 mb-6 glass-card rounded-2xl px-6 py-4">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white text-2xl shadow-md">
+        💄
+      </div>
+      <div>
+        <h1 class="text-xl md:text-2xl font-black text-gray-800 tracking-tight">美妝品牌通路拓荒戰</h1>
+        <p class="text-xs md:text-sm text-pink-600 font-medium">Ch10 行銷通路與實體運配｜全班即時策略模擬</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2.5">
+      <!-- BGM Audio Controller (Animal Crossing / Pikmin Cozy Synth Engine) -->
+      <div class="flex items-center bg-amber-50/90 border border-amber-200 rounded-full px-3 py-1 gap-2 shadow-sm">
+        <button id="bgm-toggle-btn" onclick="toggleBGM()" class="flex items-center gap-1.5 text-xs font-bold text-amber-800 hover:text-pink-600 transition">
+          <span id="bgm-icon">🔇</span>
+          <span id="bgm-label">開啟療癒配樂</span>
+        </button>
+        <select id="bgm-style-select" onchange="changeBGMStyle(this.value)" title="切換配樂風格" class="bg-transparent text-[11px] font-bold text-amber-700 border-l border-amber-200 pl-2 focus:outline-none cursor-pointer">
+          <option value="ac">🍃 動森悠閒風</option>
+          <option value="pikmin">🌱 皮克敏探索風</option>
+        </select>
+      </div>
+
+      <span id="connection-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600">
+        準備就緒
+      </span>
+      <button onclick="resetToHome()" class="text-xs text-gray-500 hover:text-pink-600 underline px-2 py-1">
+        切換模式
+      </button>
+    </div>
+  </header>
+
+  <!-- VIEW 1: LANDING / MODE SELECTION -->
+  <section id="view-landing" class="space-y-6">
+    <div class="glass-card rounded-3xl p-8 text-center max-w-3xl mx-auto">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-pink-100 text-pink-700 font-bold text-sm mb-4">
+        馬偕醫護管理專科學校・化妝品行銷學
+      </span>
+      <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
+        打造你的美妝帝國：<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600">通路策略 × 運配決策實戰</span>
+      </h2>
+      <p class="text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+        每位同學將獨立經營一家新創美妝品牌，經歷 <strong>5 大通路階段、15 回合策略考驗</strong>（含 3 張產業突發事件卡）。個人戰績將即時加總至所屬組別，角逐最強通路霸主！
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 text-left">
+        <!-- Student Card -->
+        <div class="border-2 border-pink-200 rounded-2xl p-6 bg-white/80 hover:border-pink-500 transition flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">📱</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">我是學生（參賽選手）</h3>
+            <p class="text-sm text-gray-600 mb-4">選擇你的組別（第1～5組），輸入學號與品牌主理人綽號，在手機上獨立闖關！</p>
+          </div>
+          <button onclick="showStudentJoin()" class="w-full py-3.5 rounded-xl text-white font-bold btn-primary shadow-md">
+            進入選手登入 →
+          </button>
+        </div>
+
+        <!-- Teacher Dashboard Card -->
+        <div class="border-2 border-purple-200 rounded-2xl p-6 bg-white/80 hover:border-purple-500 transition flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🖥️</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">我是老師（講台大螢幕）</h3>
+            <p class="text-sm text-gray-600 mb-4">產生全班連線 QR Code，即時投影 5 組總分排行、目前出題情境與各回合知識解析。</p>
+          </div>
+          <button onclick="showTeacherSetup()" class="w-full py-3.5 rounded-xl text-white font-bold bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 transition shadow-md">
+            開啟大螢幕戰情室 →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Rules Overview -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      <div class="glass-card rounded-2xl p-5">
+        <div class="font-bold text-pink-700 mb-1">💰 雙指標經營制</div>
+        <p class="text-xs text-gray-600 leading-relaxed">開局擁有 <strong>資金 1,000 萬</strong> 與 <strong>口碑 50 分</strong>。最終個人總分 ＝ <code>資金(萬) + 口碑 × 10</code>。</p>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <div class="font-bold text-purple-700 mb-1">⚡ 15 回合全章貫通</div>
+        <p class="text-xs text-gray-600 leading-relaxed">涵蓋通路功能與六大流、通路結構、配銷廣度、領導權力、VMS/HMS 與實體運配五大子系統。</p>
+      </div>
+      <div class="glass-card rounded-2xl p-5">
+        <div class="font-bold text-amber-700 mb-1">🎵 療癒遊戲配樂與音效</div>
+        <p class="text-xs text-gray-600 leading-relaxed">內建「動物森友會」與「皮克敏」風格輕快背景音樂，搭配清脆按鍵與過關音效，營造輕鬆專注的課堂氛圍。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 2: TEACHER SETUP & LIVE DASHBOARD -->
+  <section id="view-teacher" class="hidden space-y-6">
+    <!-- Setup Panel -->
+    <div id="teacher-setup-box" class="glass-card rounded-3xl p-6 md:p-8">
+      <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+        <div>
+          <h2 class="text-2xl font-black text-gray-800">大螢幕戰情室設定</h2>
+          <p class="text-sm text-gray-600">建立房間後，將 QR Code 與即時出題情境投影至大螢幕（啟動時自動開啟背景配樂）</p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="launchTeacherRoom(&#39;demo&#39;)" class="px-4 py-2 rounded-xl bg-amber-100 text-amber-800 font-bold text-sm hover:bg-amber-200 transition">
+            單機預覽 / 模擬30人測試
+          </button>
+          <button onclick="toggleFirebaseConfig()" class="px-4 py-2 rounded-xl bg-purple-100 text-purple-800 font-bold text-sm hover:bg-purple-200 transition">
+            ⚙️ 雲端連線設定 (Firebase)
+          </button>
+        </div>
+      </div>
+
+      <!-- Optional Firebase Config Drawer -->
+      <div id="firebase-config-drawer" class="hidden bg-slate-50 border border-slate-200 rounded-2xl p-4 mb-5 text-sm space-y-3">
+        <p class="font-bold text-slate-700">多人跨裝置即時同步設定（選填）：</p>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          若要讓 30 位學生各自用手機掃碼並即時回傳分數至講台大螢幕，請貼上你的 Firebase Realtime Database URL。若未填寫，系統將使用同裝置瀏覽器同步與單機模擬模式。
+        </p>
+        <div class="grid md:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1">Firebase Database URL（可留空）</label>
+            <input id="fb-db-url" type="text" placeholder="https://your-project-default-rtdb.firebaseio.com" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1">自訂班級房間代碼（4～6碼英數字）</label>
+            <input id="custom-room-code" type="text" value="MK2026" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs uppercase font-bold">
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <button onclick="launchTeacherRoom(&#39;live&#39;)" class="px-6 py-3.5 rounded-xl text-white font-bold btn-primary shadow-md text-base">
+          🚀 啟動大螢幕戰情室（含配樂）
+        </button>
+        <span class="text-xs text-gray-500">提示：部署至 GitHub Pages 後，學生掃描 QR Code 即可直接帶入房間代碼加入。</span>
+      </div>
+    </div>
+
+    <!-- Live Dashboard Area -->
+    <div id="teacher-live-board" class="hidden space-y-6">
+      <!-- Top Bar: QR Code + 5 Group Standings -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- QR & Room Info -->
+        <div class="glass-card rounded-3xl p-5 flex items-center gap-4">
+          <div id="qrcode-container" class="bg-white p-2.5 rounded-2xl border border-pink-200 shadow-inner shrink-0"></div>
+          <div class="space-y-1">
+            <span class="px-2.5 py-0.5 rounded-md bg-pink-100 text-pink-700 text-xs font-bold">掃碼加入遊戲</span>
+            <div class="text-xs text-gray-500">房間代碼</div>
+            <div id="display-room-code" class="text-2xl md:text-3xl font-black tracking-wider text-purple-700">MK2026</div>
+            <div class="text-xs text-gray-600">已連線選手：<strong id="total-players-count" class="text-pink-600 text-base">0</strong> 人</div>
+            <div class="pt-1 flex flex-wrap gap-1.5">
+              <button onclick="simulateBots()" class="px-2.5 py-1 rounded-lg bg-gray-100 hover:bg-gray-200 text-xs font-medium text-gray-700">
+                +模擬30人
+              </button>
+              <button onclick="clearRoomData()" class="px-2.5 py-1 rounded-lg bg-red-50 hover:bg-red-100 text-xs font-medium text-red-600">
+                清空重置
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group Podium / Team Standings (5 Groups) -->
+        <div class="lg:col-span-2 glass-card rounded-3xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-lg font-black text-gray-800 flex items-center gap-2">
+              🏆 五大美妝集團即時總積分榜
+            </h3>
+            <span class="text-xs text-gray-500">組總分 ＝ 組員個人總分加總</span>
+          </div>
+          <div id="group-leaderboard" class="grid grid-cols-1 sm:grid-cols-5 gap-3">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW: Big Screen Live Scenario Spotlight (目前出題情境看板) -->
+      <div class="glass-card rounded-3xl p-6 border-2 border-pink-300/70 bg-gradient-to-r from-white/95 via-pink-50/60 to-purple-50/60">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-pink-100">
+          <div class="flex items-center gap-2.5">
+            <span class="px-3 py-1 rounded-full bg-pink-600 text-white text-xs font-black tracking-wide shadow-sm">
+              📺 大螢幕出題情境同步看板
+            </span>
+            <span id="live-spotlight-mode-badge" class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">
+              自動追蹤全班最前線進度
+            </span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="stepSpotlightRound(-1)" class="px-3 py-1.5 rounded-xl bg-white border border-gray-200 hover:border-pink-400 text-xs font-bold text-gray-700 shadow-sm">
+              ◀ 上一題
+            </button>
+            <select id="teacher-round-inspector" onchange="manualInspectRound(this.value)" class="px-3 py-1.5 rounded-xl border border-pink-200 text-xs md:text-sm font-bold text-gray-800 bg-white shadow-sm">
+              <!-- Populated by JS -->
+            </select>
+            <button onclick="stepSpotlightRound(1)" class="px-3 py-1.5 rounded-xl bg-white border border-gray-200 hover:border-pink-400 text-xs font-bold text-gray-700 shadow-sm">
+              下一題 ▶
+            </button>
+            <button id="auto-follow-btn" onclick="enableAutoFollow()" class="px-3 py-1.5 rounded-xl bg-purple-600 text-white text-xs font-bold shadow-sm hover:bg-purple-700">
+              🔄 追蹤全班最新題
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+          <!-- Left: Current Question Scenario & Options -->
+          <div class="lg:col-span-8 space-y-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="spotlight-stage" class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-xs font-bold">階段一｜§10.1 通路功能與通路流</span>
+              <span id="spotlight-players-at-round" class="text-xs font-bold text-pink-600">目前有 0 位同學正在挑戰此回合</span>
+            </div>
+            <h3 id="spotlight-title" class="text-xl md:text-2xl font-black text-gray-900">第 1 回合：新創精華液的經銷商分工</h3>
+            <p id="spotlight-scenario" class="text-base md:text-lg text-gray-800 leading-relaxed bg-white p-4 rounded-2xl border border-pink-100 shadow-sm">
+              情境描述...
+            </p>
+            <div id="spotlight-options" class="grid grid-cols-1 md:grid-cols-3 gap-2.5 pt-1">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Right: Teacher Answer Toggle & Theory Keypoint -->
+          <div class="lg:col-span-4 bg-white/90 rounded-2xl p-5 border border-purple-100 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-black text-purple-800">📖 教師講解與解答卡</span>
+              <button id="toggle-answer-btn" onclick="toggleSpotlightAnswer()" class="px-3 py-1 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-900 text-xs font-bold transition">
+                👁️ 顯示解答（防劇透已隱藏）
+              </button>
+            </div>
+            <div id="spotlight-answer-box" class="hidden space-y-2 pt-2 border-t border-gray-100 text-xs md:text-sm">
+              <!-- Populated by JS -->
+            </div>
+            <div id="spotlight-answer-placeholder" class="py-6 text-center text-xs text-gray-400 bg-gray-50 rounded-xl border border-dashed border-gray-200">
+              為避免大螢幕直接暴雷，解答預設隱藏。<br>全班作答差不多後，點擊上方「顯示解答」即可講解！
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom: Individual Leaderboard -->
+      <div class="glass-card rounded-3xl p-6">
+        <div class="flex flex-wrap justify-between items-center gap-2 mb-4">
+          <h3 class="text-lg font-black text-gray-800">👑 個人品牌主理人即時戰績（前 15 名）</h3>
+          <div class="flex items-center gap-3">
+            <span class="text-xs text-gray-500">公式：<code>資金(萬) + 口碑 × 10</code></span>
+            <span id="avg-progress-label" class="text-xs font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">全班平均進度：第 0 / 15 回合</span>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-pink-100 text-xs text-gray-500">
+                <th class="py-2.5 px-2">名次</th>
+                <th class="py-2.5 px-2">組別</th>
+                <th class="py-2.5 px-2">學號 / 綽號</th>
+                <th class="py-2.5 px-2 text-center">進度</th>
+                <th class="py-2.5 px-2 text-right">資金(萬)</th>
+                <th class="py-2.5 px-2 text-right">口碑</th>
+                <th class="py-2.5 px-2 text-right">個人總分</th>
+              </tr>
+            </thead>
+            <tbody id="individual-leaderboard-body" class="text-sm divide-y divide-gray-100">
+              <tr>
+                <td colspan="7" class="py-8 text-center text-gray-400">等待同學掃碼登入中...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 3: STUDENT JOIN FORM -->
+  <section id="view-student-join" class="hidden max-w-md mx-auto">
+    <div class="glass-card rounded-3xl p-7 space-y-5">
+      <div class="text-center">
+        <div class="inline-flex w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 items-center justify-center text-3xl mb-3">✨</div>
+        <h2 class="text-2xl font-black text-gray-800">建立你的美妝品牌</h2>
+        <p class="text-xs text-gray-500 mt-1">請填寫正確學號以便老師登記課堂表現</p>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-bold text-gray-700 mb-1">房間代碼</label>
+          <input id="student-room-input" type="text" value="MK2026" class="w-full px-4 py-3 rounded-xl border border-gray-300 font-bold uppercase tracking-wider focus:outline-none focus:border-pink-500">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-700 mb-1">選擇所屬組別（組員總分將加總）</label>
+          <div class="grid grid-cols-5 gap-2" id="group-selector">
+            <button type="button" onclick="selectGroup(1)" data-group="1" class="group-btn py-2.5 rounded-xl border-2 border-gray-200 font-bold text-sm hover:border-pink-400">第1組</button>
+            <button type="button" onclick="selectGroup(2)" data-group="2" class="group-btn py-2.5 rounded-xl border-2 border-gray-200 font-bold text-sm hover:border-pink-400">第2組</button>
+            <button type="button" onclick="selectGroup(3)" data-group="3" class="group-btn py-2.5 rounded-xl border-2 border-gray-200 font-bold text-sm hover:border-pink-400">第3組</button>
+            <button type="button" onclick="selectGroup(4)" data-group="4" class="group-btn py-2.5 rounded-xl border-2 border-gray-200 font-bold text-sm hover:border-pink-400">第4組</button>
+            <button type="button" onclick="selectGroup(5)" data-group="5" class="group-btn py-2.5 rounded-xl border-2 border-gray-200 font-bold text-sm hover:border-pink-400">第5組</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-700 mb-1">你的學號</label>
+          <input id="student-id-input" type="text" placeholder="例如：11123456" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-pink-500">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-gray-700 mb-1">自訂主理人綽號 / 品牌名</label>
+          <input id="student-nick-input" type="text" placeholder="例如：信義區美妝大亨" maxlength="12" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-pink-500">
+        </div>
+
+        <button onclick="startStudentGame()" class="w-full py-4 rounded-xl text-white font-black text-lg btn-primary shadow-lg mt-2">
+          開張營業！進入第 1 回合 🚀
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 4: STUDENT GAMEPLAY -->
+  <section id="view-student-game" class="hidden max-w-2xl mx-auto space-y-4">
+    <!-- Player Status HUD -->
+    <div class="glass-card rounded-2xl p-4">
+      <div class="flex flex-wrap justify-between items-center gap-2 pb-3 border-b border-pink-100">
+        <div class="flex items-center gap-2">
+          <span id="hud-group-badge" class="px-2.5 py-1 rounded-lg bg-purple-600 text-white text-xs font-bold">第1組</span>
+          <span id="hud-player-name" class="font-bold text-gray-800 text-sm">11123456・美妝大亨</span>
+        </div>
+        <div class="text-xs font-bold text-pink-600">
+          目前總分：<span id="hud-total-score" class="text-base font-black">1500</span> 分
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 pt-3 text-center">
+        <div class="bg-emerald-50 rounded-xl p-2 border border-emerald-100">
+          <div class="text-[11px] text-emerald-700 font-medium">💰 品牌資金</div>
+          <div id="hud-cash" class="text-lg font-black text-emerald-700">1,000 萬</div>
+        </div>
+        <div class="bg-pink-50 rounded-xl p-2 border border-pink-100">
+          <div class="text-[11px] text-pink-700 font-medium">💖 市場口碑</div>
+          <div id="hud-rep" class="text-lg font-black text-pink-700">50 分</div>
+        </div>
+        <div class="bg-indigo-50 rounded-xl p-2 border border-indigo-100">
+          <div class="text-[11px] text-indigo-700 font-medium">🚩 闖關進度</div>
+          <div id="hud-round" class="text-lg font-black text-indigo-700">1 / 15</div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="w-full bg-gray-200 rounded-full h-2 mt-3 overflow-hidden">
+        <div id="hud-progress-bar" class="bg-gradient-to-r from-pink-500 to-purple-600 h-2 rounded-full transition-all duration-300" style="width: 6.6%"></div>
+      </div>
+    </div>
+
+    <!-- Question / Event Card -->
+    <div id="game-card-container" class="glass-card rounded-3xl p-6 md:p-7 space-y-5">
+      <div class="flex items-center justify-between gap-2">
+        <span id="card-stage-tag" class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">
+          階段一｜§10.1 通路功能與通路流
+        </span>
+        <span id="card-type-tag" class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold">
+          策略決策
+        </span>
+      </div>
+
+      <div>
+        <h3 id="card-title" class="text-xl font-black text-gray-900 mb-2">回合標題</h3>
+        <p id="card-scenario" class="text-gray-700 text-sm md:text-base leading-relaxed bg-white/80 p-4 rounded-2xl border border-gray-100">
+          情境描述...
+        </p>
+      </div>
+
+      <!-- Options List -->
+      <div id="card-options" class="space-y-3">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Feedback Box (Shown after answering) -->
+      <div id="card-feedback" class="hidden rounded-2xl p-5 border-2 space-y-3">
+        <div class="flex items-center justify-between">
+          <span id="feedback-badge" class="font-black text-lg">🎉 決策精準！</span>
+          <div id="feedback-delta" class="text-sm font-bold"></div>
+        </div>
+        <p id="feedback-explanation" class="text-sm text-gray-700 leading-relaxed"></p>
+        <button id="next-round-btn" onclick="goNextRound()" class="w-full py-3.5 rounded-xl text-white font-bold btn-primary shadow-md">
+          進入下一回合 →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 5: STUDENT FINAL SUMMARY -->
+  <section id="view-student-end" class="hidden max-w-xl mx-auto">
+    <div class="glass-card rounded-3xl p-8 text-center space-y-6">
+      <div class="text-5xl">🏆</div>
+      <div>
+        <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold">15 回合拓荒完成</span>
+        <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-2">品牌年度經營結算報告</h2>
+        <p id="end-player-info" class="text-sm text-gray-600 mt-1">第1組｜11123456・品牌主理人</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl p-6 text-white shadow-lg">
+        <div class="text-xs opacity-90 mb-1">你的最終個人總分（已計入組別總分）</div>
+        <div id="end-total-score" class="text-5xl font-black tracking-tight">2,500</div>
+        <div id="end-title-rank" class="mt-2 inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-bold">
+          👑 稱號：美妝通路戰略大師
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-emerald-50 rounded-2xl p-4 border border-emerald-200">
+          <div class="text-xs text-emerald-700 font-bold">最終品牌資金</div>
+          <div id="end-cash" class="text-2xl font-black text-emerald-700 mt-1">1,800 萬</div>
+        </div>
+        <div class="bg-pink-50 rounded-2xl p-4 border border-pink-200">
+          <div class="text-xs text-pink-700 font-bold">最終市場口碑</div>
+          <div id="end-rep" class="text-2xl font-black text-pink-700 mt-1">70 分</div>
+        </div>
+      </div>
+
+      <div class="text-left bg-white/80 rounded-2xl p-4 border border-gray-200 max-h-60 overflow-y-auto">
+        <h4 class="text-xs font-bold text-gray-500 mb-2">你的 15 回合決策歷程回顧：</h4>
+        <ul id="end-history-list" class="space-y-2 text-xs text-gray-700"></ul>
+      </div>
+
+      <p class="text-xs text-gray-500">請抬頭看講台大螢幕，確認你所屬組別的最終排名！</p>
+    </div>
+  </section>
+</div>
+
+<script>
+// ==========================================
+// 0. Web Audio API 療癒背景音樂引擎 (動森悠閒風 & 皮克敏探索風)
+// ==========================================
+const CozyAudioEngine = {
+  ctx: null,
+  isPlaying: false,
+  style: 'ac', // 'ac' (Animal Crossing island marimba/rhodes) | 'pikmin' (Pikmin playful pizzicato/woodwind)
+  timerId: null,
+  step: 0,
+
+  init() {
+    if (!this.ctx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      this.ctx = new AudioContext();
+    }
+    if (this.ctx.state === 'suspended') {
+      this.ctx.resume();
+    }
+  },
+
+  // 播放溫暖柔和的木琴/電鋼琴音符
+  playTone(freq, duration, type = 'sine', volume = 0.08, delay = 0) {
+    if (!this.ctx || !freq) return;
+    const now = this.ctx.currentTime + delay;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, now);
+
+    // 柔和包絡線 (Soft Attack & Decay，營造動森/皮克敏的圓潤木質音色)
+    gain.gain.setValueAtTime(0.0001, now);
+    gain.gain.exponentialRampToValueAtTime(volume, now + 0.025);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+
+    osc.start(now);
+    osc.stop(now + duration + 0.05);
+  },
+
+  // 播放柔和和弦伴奏
+  playChord(freqs, duration, volume = 0.03) {
+    freqs.forEach(f => this.playTone(f, duration, 'triangle', volume, 0));
+  },
+
+  // 互動音效 (答對 / 答錯 / 按鈕 / 突發事件)
+  playSFX(sfxType) {
+    if (!this.isPlaying && !this.ctx) return;
+    this.init();
+    if (sfxType === 'correct') {
+      // 清脆明亮的三連音上行 (C5 - E5 - G5 - C6)
+      this.playTone(523.25, 0.18, 'triangle', 0.11, 0);
+      this.playTone(659.25, 0.18, 'triangle', 0.11, 0.08);
+      this.playTone(783.99, 0.18, 'triangle', 0.11, 0.16);
+      this.playTone(1046.50, 0.35, 'sine', 0.12, 0.24);
+    } else if (sfxType === 'wrong') {
+      // 柔和的提示音 (G4 -> Eb4)
+      this.playTone(392.00, 0.22, 'sine', 0.09, 0);
+      this.playTone(311.13, 0.35, 'sine', 0.09, 0.16);
+    } else if (sfxType === 'event') {
+      // 俏皮驚喜音 (皮克敏發現寶物感)
+      this.playTone(587.33, 0.12, 'triangle', 0.1, 0);
+      this.playTone(783.99, 0.12, 'triangle', 0.1, 0.09);
+      this.playTone(987.77, 0.28, 'sine', 0.11, 0.18);
+    } else if (sfxType === 'click') {
+      this.playTone(659.25, 0.09, 'sine', 0.06, 0);
+    }
+  },
+
+  start() {
+    this.init();
+    if (this.isPlaying) return;
+    this.isPlaying = true;
+    this.step = 0;
+
+    // 動物森友會悠閒小島風 (F大調/C大調 輕快切分節奏)
+    const acMelody = [
+      523.25, 0, 659.25, 783.99,  880.00, 783.99, 659.25, 0,
+      587.33, 0, 698.46, 880.00,  783.99, 0, 659.25, 587.33,
+      523.25, 659.25, 783.99, 1046.50, 880.00, 783.99, 659.25, 523.25,
+      587.33, 659.25, 587.33, 493.88, 523.25, 0, 0, 0
+    ];
+    const acChords = {
+      0: [261.63, 329.63, 392.00], // Cmaj
+      8: [293.66, 349.23, 440.00], // Dm
+      16: [261.63, 329.63, 392.00], // Cmaj
+      24: [196.00, 246.94, 349.23]  // G7
+    };
+
+    // 皮克敏庭園探索風 (輕巧跳躍撥弦感 Pizzicato + 清新長笛音色)
+    const pikminMelody = [
+      659.25, 587.33, 523.25, 587.33, 659.25, 0, 783.99, 0,
+      698.46, 659.25, 587.33, 659.25, 698.46, 0, 880.00, 0,
+      783.99, 659.25, 523.25, 659.25, 880.00, 783.99, 698.46, 587.33,
+      659.25, 587.33, 493.88, 587.33, 523.25, 0, 0, 0
+    ];
+    const pikminBass = [
+      261.63, 0, 392.00, 0, 329.63, 0, 392.00, 0,
+      293.66, 0, 440.00, 0, 349.23, 0, 440.00, 0,
+      261.63, 0, 329.63, 0, 349.23, 0, 293.66, 0,
+      196.00, 0, 246.94, 0, 261.63, 0, 0, 0
+    ];
+
+    const tick = () => {
+      if (!this.isPlaying) return;
+      const idx = this.step % 32;
+
+      if (this.style === 'ac') {
+        const note = acMelody[idx];
+        if (note > 0) {
+          this.playTone(note, 0.42, 'sine', 0.065, 0);
+          // 泛音增加木琴溫暖感
+          this.playTone(note * 2, 0.15, 'triangle', 0.015, 0);
+        }
+        if (acChords[idx]) {
+          this.playChord(acChords[idx], 1.4, 0.025);
+        }
+      } else {
+        const note = pikminMelody[idx];
+        const bass = pikminBass[idx];
+        if (note > 0) {
+          this.playTone(note, 0.32, 'triangle', 0.06, 0);
+        }
+        if (bass > 0) {
+          this.playTone(bass, 0.25, 'sine', 0.055, 0);
+        }
+      }
+
+      this.step++;
+      const tempoMs = this.style === 'ac' ? 280 : 250;
+      this.timerId = setTimeout(tick, tempoMs);
+    };
+
+    tick();
+    updateBGMUI();
+  },
+
+  stop() {
+    this.isPlaying = false;
+    if (this.timerId) {
+      clearTimeout(this.timerId);
+      this.timerId = null;
+    }
+    updateBGMUI();
+  }
+};
+
+function toggleBGM() {
+  if (CozyAudioEngine.isPlaying) {
+    CozyAudioEngine.stop();
+  } else {
+    CozyAudioEngine.start();
+  }
+}
+
+function changeBGMStyle(newStyle) {
+  CozyAudioEngine.style = newStyle;
+  if (!CozyAudioEngine.isPlaying) {
+    CozyAudioEngine.start();
+  }
+}
+
+function updateBGMUI() {
+  const icon = document.getElementById('bgm-icon');
+  const label = document.getElementById('bgm-label');
+  if (CozyAudioEngine.isPlaying) {
+    icon.textContent = '🎵';
+    icon.classList.add('music-playing-icon');
+    label.textContent = '配樂播放中';
+  } else {
+    icon.textContent = '🔇';
+    icon.classList.remove('music-playing-icon');
+    label.textContent = '開啟療癒配樂';
+  }
+}
+
+// ==========================================
+// 1. 15 回合完整題庫與突發事件設計 (Ch10 行銷通路與實體運配)
+// ==========================================
+const ROUNDS = [
+  {
+    round: 1,
+    stage: "階段一｜§10.1 通路功能與通路流",
+    type: "decision",
+    title: "第 1 回合：新創精華液的經銷商分工",
+    scenario: "你的品牌剛推出「積雪草舒緩精華」，某美妝經銷商主動向你進貨一大箱 500 瓶，並幫你「拆成每盒 12 瓶賣給小型美妝店，同時搭配其他品牌的化妝棉與面膜一起供貨給店家」。請問這發揮了通路「物流功能」中的哪兩項功能？",
+    options: [
+      {
+        text: "A. 分裝（化整為零）與 組合（集結多樣產品供單店購足）",
+        cash: 150, rep: 5, correct: true,
+        feedback: "完全正確！§10.1.1 指出，物流功能包含「分裝」（將大量商品以小批量出售）與「組合」（從不同生產商購入產品，使顧客能在單一零售點購足所需）。"
+      },
+      {
+        text: "B. 融資（資金融通）與 風險承擔（承擔過時損壞風險）",
+        cash: -50, rep: -3, correct: false,
+        feedback: "選錯囉！融資屬於「促進功能」，風險承擔屬於「交易功能」；把大箱拆小盒並搭配多品項供貨是物流功能中的「分裝」與「組合」。"
+      },
+      {
+        text: "C. 交涉（湊合交易條件）與 資訊（蒐集顧客情報）",
+        cash: -50, rep: -3, correct: false,
+        feedback: "不對喔！交涉屬於「交易功能」，資訊屬於「促進功能」，與實體貨品拆箱搭配無關。"
+      }
+    ]
+  },
+  {
+    round: 2,
+    stage: "階段一｜§10.1 通路功能與通路流",
+    type: "decision",
+    title: "第 2 回合：追蹤藥妝店貨款流向",
+    scenario: "消費者走進屈臣氏買了一瓶你的「胺基酸卸妝水」並刷卡付款，這筆貨款經過零售商、批發商結算後，最終匯回你的品牌公司帳戶。請問這條「顧客 → 零售商 → 批發商 → 製造商」的反向移動路徑屬於哪一種通路流？",
+    options: [
+      {
+        text: "A. 金錢流（貨款由顧客經中間商流向製造商）",
+        cash: 150, rep: 5, correct: true,
+        feedback: "精準判斷！§10.1.2 說明「金錢流」是指顧客購買商品的貨款，經由各個中間商反向移向製造廠商。"
+      },
+      {
+        text: "B. 所有權流（商品擁有與處分權力的移轉）",
+        cash: -50, rep: -3, correct: false,
+        feedback: "方向相反囉！「所有權流」是由製造商經由中間商流向顧客（正向），而貨款回收才是「金錢流」。"
+      },
+      {
+        text: "C. 商品流（實體商品經由貨運與中間商移向顧客）",
+        cash: -50, rep: -3, correct: false,
+        feedback: "「商品流」是實體貨品從工廠送到消費者手上，刷卡付款的資金回收是「金錢流」。"
+      }
+    ]
+  },
+  {
+    round: 3,
+    stage: "突發事件卡 ①｜市場熱度檢驗",
+    type: "event",
+    title: "⚡ 突發事件：美妝 KOL 突然開箱爆紅！",
+    scenario: "知名美妝 YouTuber 在「年度空空賞」影片中意外推薦了你的積雪草精華，全網搜尋度瞬間暴增！系統將根據你前兩回合累積的「市場口碑」決定品牌命運（口碑 ≥ 55 分代表基本功紮實，可直接收割自然流量紅利；口碑 < 55 分則需緊急花錢投廣追趕）！",
+    isDynamicEvent: true,
+    eventType: "kol_boom"
+  },
+  {
+    round: 4,
+    stage: "階段二｜§10.2 通路的結構",
+    type: "decision",
+    title: "第 4 回合：頂級高訂基因安瓶的通路結構",
+    scenario: "你研發了一款單價高達 4,800 元、主打「AI 個人膚質檢測＋客製化調配」的頂級抗老安瓶。為了保住高毛利、迅速回應VIP顧客並嚴格掌控服務品質，最適合採用哪一種消費市場通路結構？",
+    options: [
+      {
+        text: "A. 直接通路（品牌官網 ＋ 品牌直營旗艦沙龍，不經中間商）",
+        cash: 250, rep: 8, correct: true,
+        feedback: "策略滿分！§10.2.1 指出，直接通路只包括生產廠商與消費者，優點是比較經濟（免中間商抽成）、容易控制品質，並能迅速回應市場。"
+      },
+      {
+        text: "B. 三階間接通路（製造商 → 代理商 → 批發商 → 零售商 → 顧客）",
+        cash: -100, rep: -6, correct: false,
+        feedback: "太冗長了！層層中間商不僅會吃掉高訂安瓶的利潤，也無法落實客製化膚質檢測服務，導致品牌口碑下滑。"
+      },
+      {
+        text: "C. 二階間接通路（透過大盤批發商鋪貨給傳統雜貨美妝店）",
+        cash: -80, rep: -5, correct: false,
+        feedback: "4,800 元的高單價客製化安瓶放在傳統批發零售通路會完全喪失尊榮感，且難以掌控顧客體驗。"
+      }
+    ]
+  },
+  {
+    round: 5,
+    stage: "階段二｜§10.2 通路的結構",
+    type: "decision",
+    title: "第 5 回合：進軍全台 200 家醫美診所（組織市場）",
+    scenario: "你開發了 1000ml 大桶裝「雷射術後專用冷敷凝膠」，目標客戶是全台 200 家醫美診所（屬於組織市場）。考量組織市場具有「地理區域集中、購買量大、家數少、買賣關係密切」的特性，最典型的通路型態為何？",
+    options: [
+      {
+        text: "A. 直接通路（由品牌專業醫藥業務團隊直接供貨給醫美診所）",
+        cash: 200, rep: 6, correct: true,
+        feedback: "正確！§10.2.2 說明組織市場家數少、購買量大且關係密切，通路一般比消費市場短，「直接通路」是最典型的通路型態。"
+      },
+      {
+        text: "B. 透過超商與藥妝店零售商轉賣給醫美診所",
+        cash: -60, rep: -4, correct: false,
+        feedback: "不合理喔！診所屬於組織用戶，採購量大且需專業規格，不會去一般消費性零售店零買。"
+      },
+      {
+        text: "C. 必須經過代理商、大盤商、中盤商三層轉手才能賣給診所",
+        cash: -50, rep: -3, correct: false,
+        feedback: "組織市場通路較消費市場短，不需層層轉手，頂多透過單一工業配銷商或直接銷售。"
+      }
+    ]
+  },
+  {
+    round: 6,
+    stage: "階段二｜§10.2 通路的結構",
+    type: "decision",
+    title: "第 6 回合：手作調香與臉部 SPA 體驗館（服務市場）",
+    scenario: "你在台北東區開設「客製化手作調香與臉部 SPA 體驗館」，因為這類美妝服務具有「生產與消費同步進行」的特性，最適合採行哪種服務市場通路結構？",
+    options: [
+      {
+        text: "A. 直接通路（或僅透過指定線上預約平台代理商媒合顧客）",
+        cash: 150, rep: 6, correct: true,
+        feedback: "完全正確！§10.2.3 指出，服務大多生產與消費同步進行，因此偏向採「直接通路」，若用中間商通常也僅限「代理商」（如預約平台）。"
+      },
+      {
+        text: "B. 批發商通路（先將 SPA 服務賣斷給批發商囤貨再轉賣）",
+        cash: -70, rep: -4, correct: false,
+        feedback: "服務具有不可儲存性（生產與消費同步），無法像實體罐頭一樣交給批發商囤貨轉售！"
+      },
+      {
+        text: "C. 三階間接通路（透過多層經銷商層層轉包施術服務）",
+        cash: -60, rep: -4, correct: false,
+        feedback: "服務市場通路極短，層層轉包會讓服務品質失控。"
+      }
+    ]
+  },
+  {
+    round: 7,
+    stage: "階段三｜§10.3 通路管理決策與衝突",
+    type: "decision",
+    title: "第 7 回合：59 元平價保濕面膜的「配銷廣度」",
+    scenario: "你推出一款定價 59 元的「學生族日常保濕面膜」，目標是讓消費者在超商、藥妝店、超市、網購走到哪都買得到，創造最大的產品涵蓋面。請問應採取哪種配銷廣度策略？（注意：大量鋪貨需支付高額上架費）",
+    options: [
+      {
+        text: "A. 密集性配銷（採用最大可能數目的零售商，衝高涵蓋面與口碑，但上架費使資金減少）",
+        cash: -80, rep: 16, correct: true,
+        feedback: "非常道地的策略取捨！§10.3.2 指出，平價便利品適合「密集性配銷」，能提供最大產品涵蓋面（口碑 +16），但代價是通路上架與管銷成本高（資金 -80萬）。"
+      },
+      {
+        text: "B. 獨占性配銷（全台灣只授權 1 家百貨專櫃販售 59 元面膜）",
+        cash: -50, rep: -10, correct: false,
+        feedback: "嚴重錯配！59 元平價面膜若只放 1 家專櫃，消費者根本買不到，完全錯失大眾市場涵蓋率。"
+      },
+      {
+        text: "C. 選擇性配銷（每個縣市只挑 1 家精品店販售）",
+        cash: 20, rep: -4, correct: false,
+        feedback: "平價日常消耗品需要極高的購買便利性，選擇性配銷的涵蓋面仍嫌不足。"
+      }
+    ]
+  },
+  {
+    round: 8,
+    stage: "階段三｜§10.3 通路管理決策與衝突",
+    type: "decision",
+    title: "第 8 回合：法國頂級沙龍香氛的「配銷廣度」",
+    scenario: "你取得法國皇室級沙龍香氛代理權，單瓶售價 12,000 元。為了維持頂級尊榮感、確保專業侍香師服務品質，你在台北市信義區只授權「微風信義 1 家旗艦店」販售，這是哪種策略？",
+    options: [
+      {
+        text: "A. 獨占性配銷（在特定地理區域只允許一家或極少數零售商配銷）",
+        cash: 200, rep: 10, correct: true,
+        feedback: "答對了！§10.3.2 定義「獨占性配銷」是在某一地理區域只允許一家或極少數經銷商配銷，最能強化奢侈品形象與零售商服務投入。"
+      },
+      {
+        text: "B. 密集性配銷（把 12,000 元香水鋪貨到全台四大超商與夜市）",
+        cash: -100, rep: -15, correct: false,
+        feedback: "災難性決策！頂級沙龍香氛一旦採密集性配銷，品牌高貴形象瞬間崩盤，口碑暴跌 15 分！"
+      },
+      {
+        text: "C. 水平性配銷（讓所有路邊攤販自由批發販售）",
+        cash: -80, rep: -12, correct: false,
+        feedback: "課本三種配銷廣度為「密集性、選擇性、獨占性」，沒有水平性配銷，且放任攤販會毀掉品牌價值。"
+      }
+    ]
+  },
+  {
+    round: 9,
+    stage: "階段三｜§10.3 通路管理決策與衝突",
+    type: "decision",
+    title: "第 9 回合：藥妝巨頭上架談判的「評估準則」",
+    scenario: "某全國連鎖藥妝店開出高額上架費與抽成條件，但承諾給予黃金端架陳列。你正在製作 Excel 財務試算表，仔細比較「這個通路方案能增加多少銷售額與利潤，以及會增加多少上架與管銷成本」。請問這屬於評估通路替代方案的哪一項準則？",
+    options: [
+      {
+        text: "A. 經濟準則（從成本效益分析評估銷售額、利潤與成本）",
+        cash: 150, rep: 5, correct: true,
+        feedback: "完全命中！§10.3.3 指出，評估通路替代方案有三大準則：經濟準則（成本效益分析）、控制準則（能否控制與配合）、調適準則（彈性調整與承諾期間）。"
+      },
+      {
+        text: "B. 控制準則（評估品牌能否主導零售商的陳列與定價）",
+        cash: -40, rep: -2, correct: false,
+        feedback: "題目強調的是「比較銷售額、利潤與成本」的成本效益分析，這是「經濟準則」而非控制準則。"
+      },
+      {
+        text: "C. 調適準則（評估合約期滿後能否彈性退出該通路）",
+        cash: -40, rep: -2, correct: false,
+        feedback: "合約彈性與承諾期間長短屬於「調適準則」，財務損益試算屬於「經濟準則」。"
+      }
+    ]
+  },
+  {
+    round: 10,
+    stage: "階段三｜§10.3 通路管理決策與衝突",
+    type: "decision",
+    title: "第 10 回合：網紅團購主破盤殺價引發危機！",
+    scenario: "你簽約的下游「網路團購主」為了衝高個人業績，私自把你的明星粉底液打 5 折拋售，導致上游供貨的你與中游批發商氣得跳腳，甚至威脅斷貨！請問「製造商／批發商」與「下游團購零售商」之間發生的這種摩擦，屬於哪一種通路衝突？",
+    options: [
+      {
+        text: "A. 垂直通路衝突（行銷通路中不同階層成員間因目標不一致產生的衝突）",
+        cash: 150, rep: 6, correct: true,
+        feedback: "精準無誤！§10.3.4.3 指出，不同階層成員間（如製造商／批發商 vs. 零售商）的衝突稱為「垂直通路衝突」，常因目標不一致（一方要衝量削價、一方要顧品牌利潤）引起。"
+      },
+      {
+        text: "B. 水平通路衝突（同一階層的兩家屈臣氏門市互相搶客）",
+        cash: -50, rep: -3, correct: false,
+        feedback: "「水平通路衝突」是指同一階層成員間的衝突（例如 A 專櫃與 B 專櫃互搶客人）；製造商與下游團購主屬於不同階層，是「垂直通路衝突」。"
+      },
+      {
+        text: "C. 實體運配衝突（倉庫面積不足導致的貨品堆疊問題）",
+        cash: -50, rep: -3, correct: false,
+        feedback: "課本將通路衝突分為「垂直通路衝突」與「水平通路衝突」兩種。"
+      }
+    ]
+  },
+  {
+    round: 11,
+    stage: "階段三｜§10.3 通路管理決策與衝突",
+    type: "decision",
+    title: "第 11 回合：通路領袖如何化解亂價衝突？",
+    scenario: "為了制止上述網紅團購主惡意破盤削價，身為通路領袖的你，拿出了當初雙方白紙黑字簽署的《經銷授權合約書》，依合約條款正式發函警告：「若 24 小時內未恢復建議售價，將依約終止授權並沒收履約保證金！」請問這是運用通路領袖的哪一種權力？",
+    options: [
+      {
+        text: "A. 法制權力（依據合約與正式授權規範要求成員配合）",
+        cash: 150, rep: 8, correct: true,
+        feedback: "非常正確！§10.3.4.1 列出通路領袖五種權力：獎賞、壓制、專家、參考、法制權力。依據雙方簽訂的合約條款行使約束力，正是「法制權力」。"
+      },
+      {
+        text: "B. 專家權力（提供專業美容知識與銷售培訓讓對方信服）",
+        cash: -40, rep: -2, correct: false,
+        feedback: "專家權力是靠專業技術與知識贏得尊重；拿出正式合約條款要求遵守規範是「法制權力」。"
+      },
+      {
+        text: "C. 參考權力（因為品牌名氣響亮，讓零售商以合作為榮）",
+        cash: -40, rep: -2, correct: false,
+        feedback: "參考權力是基於品牌聲望與認同感，依合約行使規範屬於「法制權力」。"
+      }
+    ]
+  },
+  {
+    round: 12,
+    stage: "突發事件卡 ②｜供應鏈與風險控管",
+    type: "event",
+    title: "⚡ 突發事件：海關包材卡關！法國玻璃瓶延誤",
+    scenario: "歐盟港口罷工，你從法國進口的限量滴管玻璃瓶全數卡在海關！眼看下週就要出貨，若放任斷貨將損失慘重。你必須立刻做出風險決策：",
+    isDynamicEvent: true,
+    eventType: "customs_delay"
+  },
+  {
+    round: 13,
+    stage: "階段四｜§10.4 通路的整合",
+    type: "decision",
+    title: "第 13 回合：與連鎖精品咖啡廳展開「共棲性行銷」",
+    scenario: "為了接觸更多都會上班族女性，你的美妝品牌決定與知名連鎖精品咖啡廳合作，推出「買聯名拿鐵送迷你護手霜、咖啡店內設置美妝試用角」的聯合活動。這種將行銷通路中「同一階層」成員加以整合、協調行銷行動的做法，稱為什麼？",
+    options: [
+      {
+        text: "A. 水平行銷系統（HMS，又稱共棲性行銷）",
+        cash: 200, rep: 10, correct: true,
+        feedback: "答對了！§10.4.2 指出，水平行銷系統（HMS）是整合同一階層成員（如不同產業的零售品牌異業結盟），又稱為「共棲性行銷」。"
+      },
+      {
+        text: "B. 所有權式垂直行銷系統（併購咖啡廳成為旗下子公司）",
+        cash: -60, rep: -3, correct: false,
+        feedback: "題目是異業合作推出聯名活動，並非併購上游或下游，也不是不同階層整合，因此屬於「水平行銷系統（HMS）」。"
+      },
+      {
+        text: "C. 契約式垂直行銷系統（開放咖啡廳加盟你的美妝工廠）",
+        cash: -60, rep: -3, correct: false,
+        feedback: "契約式 VMS 是不同通路階層（如總部與加盟店）的垂直整合；同階層異業合作屬於「水平行銷系統（HMS）」。"
+      }
+    ]
+  },
+  {
+    round: 14,
+    stage: "階段四｜§10.4 通路的整合",
+    type: "decision",
+    title: "第 14 回合：開放全台創業主加盟「品牌美妝概念店」",
+    scenario: "品牌知名度大開後，你決定透過加盟合約，授權全台 50 位創業主開設「品牌美妝概念店」，由總部統一提供商標、裝潢規範與貨源，加盟主出資經營並分享利潤。這屬於哪一種垂直行銷系統（VMS）？",
+    options: [
+      {
+        text: "A. 契約式 VMS（特許權組織，以合約整合不同階層成員）",
+        cash: 300, rep: 8, correct: true,
+        feedback: "完全正確！§10.4.3 指出，垂直行銷系統（VMS）分為所有權式、管理式與契約式；其中連鎖加盟（特許權組織）正是「契約式 VMS」的代表！"
+      },
+      {
+        text: "B. 所有權式 VMS（總部自己出資買下所有店面與原料工廠）",
+        cash: -50, rep: -2, correct: false,
+        feedback: "所有權式 VMS 是單一公司擁有所有成員的產權；由外部創業主簽約加盟屬於「契約式 VMS」。"
+      },
+      {
+        text: "C. 管理式 VMS（沒有簽約也沒有併購，純粹靠規模大指揮別人）",
+        cash: -50, rep: -2, correct: false,
+        feedback: "加盟連鎖具有明確的特許權合約關係，因此屬於「契約式 VMS」。"
+      }
+    ]
+  },
+  {
+    round: 15,
+    stage: "階段五｜§10.5 實體運配 ＋ 終局突發考驗",
+    type: "decision",
+    title: "⚡ 第 15 回合（終局之戰）：雙11爆單 5 萬筆與海外急單！",
+    scenario: "雙11開賣 1 小時瞬間湧入 5 萬筆訂單！海外 VIP 急需補貨「高單價限量聖誕禮盒」，同時倉庫面臨存貨爆滿風險。為了追求「運輸時間很快、可靠性高、可追蹤性高」將海外急單送達，並透過電腦共同資料庫加速訂單處理與降低存貨水準，你該啟動哪一組實體運配方案？",
+    options: [
+      {
+        text: "A. 空運模式 ＋ 自動化「訂單處理」與「存貨控制」子系統",
+        cash: 400, rep: 12, correct: true,
+        feedback: "完美收官！§10.5.2 指出，表10-2中「空運」具備時間很快、可靠性高、可追蹤性高的特性，適合高單價海外急單；搭配電腦化「訂單處理」與追求最低安全存貨的「存貨控制子系統」，成功贏得雙11終局大獎！"
+      },
+      {
+        text: "B. 水路運輸（海運）＋ 大量囤積多餘存貨在倉庫",
+        cash: -200, rep: -10, correct: false,
+        feedback: "慘遭客訴！水路運輸速度慢、可靠性與可追蹤性低，海外 VIP 聖誕節過完才收到禮盒；且 §10.5.2.3 提醒儲藏多餘產品會產生高昂保險、損壞與資金積壓成本！"
+      },
+      {
+        text: "C. 管線運輸 ＋ 人工紙本逐筆抄寫訂單",
+        cash: -250, rep: -12, correct: false,
+        feedback: "管線運輸僅適用於石油、天然氣等液氣體長途輸送，無法運送聖誕禮盒！人工抄寫 5 萬筆訂單也會讓系統徹底癱瘓。"
+      }
+    ]
+  }
+];
+
+// ==========================================
+// 2. 狀態管理與 Firebase / LocalStorage 雙引擎同步
+// ==========================================
+let appState = {
+  mode: 'landing',
+  roomCode: 'MK2026',
+  selectedGroup: null,
+  player: null,
+  playersMap: {},
+  spotlightIdx: 0,
+  autoFollowLead: true,
+  showSpotlightAnswer: false
+};
+
+let dbRef = null;
+let useFirebase = false;
+
+function initSyncEngine(roomCode, customUrl) {
+  appState.roomCode = roomCode.toUpperCase().trim() || 'MK2026';
+  const badge = document.getElementById('connection-badge');
+
+  if (customUrl && customUrl.startsWith('https://')) {
+    try {
+      if (!firebase.apps.length) {
+        firebase.initializeApp({ databaseURL: customUrl });
+      }
+      dbRef = firebase.database().ref('cosmetics_ch10_rooms/' + appState.roomCode);
+      useFirebase = true;
+      badge.textContent = `🟢 雲端同步中 (${appState.roomCode})`;
+      badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700";
+
+      dbRef.on('value', (snapshot) => {
+        const val = snapshot.val() || {};
+        appState.playersMap = val;
+        if (appState.mode === 'teacher') renderTeacherDashboard();
+      });
+      return;
+    } catch (e) {
+      console.warn("Firebase init fallback:", e);
+    }
+  }
+
+  useFirebase = false;
+  badge.textContent = `🟣 房間連線 (${appState.roomCode})`;
+  badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-700";
+
+  loadLocalRoomData();
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'ch10_game_' + appState.roomCode) {
+      loadLocalRoomData();
+      if (appState.mode === 'teacher') renderTeacherDashboard();
+    }
+  });
+}
+
+function loadLocalRoomData() {
+  try {
+    const raw = localStorage.getItem('ch10_game_' + appState.roomCode);
+    appState.playersMap = raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    appState.playersMap = {};
+  }
+}
+
+function savePlayerProgress(playerObj) {
+  appState.playersMap[playerObj.id] = playerObj;
+  if (useFirebase && dbRef) {
+    dbRef.child(playerObj.id).set(playerObj);
+  } else {
+    try {
+      localStorage.setItem('ch10_game_' + appState.roomCode, JSON.stringify(appState.playersMap));
+    } catch (e) {}
+  }
+}
+
+// ==========================================
+// 3. 視圖切換與老師大螢幕戰情室邏輯
+// ==========================================
+function hideAllViews() {
+  ['view-landing', 'view-teacher', 'view-student-join', 'view-student-game', 'view-student-end'].forEach(id => {
+    document.getElementById(id).classList.add('hidden');
+  });
+}
+
+function resetToHome() {
+  CozyAudioEngine.playSFX('click');
+  hideAllViews();
+  appState.mode = 'landing';
+  document.getElementById('view-landing').classList.remove('hidden');
+}
+
+function toggleFirebaseConfig() {
+  CozyAudioEngine.playSFX('click');
+  document.getElementById('firebase-config-drawer').classList.toggle('hidden');
+}
+
+function showTeacherSetup() {
+  CozyAudioEngine.playSFX('click');
+  hideAllViews();
+  appState.mode = 'teacher';
+  document.getElementById('view-teacher').classList.remove('hidden');
+  populateTeacherInspector();
+}
+
+function launchTeacherRoom(modeType) {
+  // 啟動老師戰情室時自動開啟療癒配樂
+  CozyAudioEngine.start();
+
+  const customUrl = document.getElementById('fb-db-url').value.trim();
+  const roomCode = document.getElementById('custom-room-code').value.trim() || 'MK2026';
+  initSyncEngine(roomCode, customUrl);
+
+  document.getElementById('teacher-live-board').classList.remove('hidden');
+  document.getElementById('display-room-code').textContent = appState.roomCode;
+
+  const qrContainer = document.getElementById('qrcode-container');
+  qrContainer.innerHTML = '';
+  const baseUrl = window.location.href.split('?')[0];
+  const joinUrl = `${baseUrl}?room=${encodeURIComponent(appState.roomCode)}`;
+  new QRCode(qrContainer, {
+    text: joinUrl,
+    width: 110,
+    height: 110,
+    colorDark: "#be185d",
+    colorLight: "#ffffff"
+  });
+
+  if (modeType === 'demo') {
+    simulateBots();
+  } else {
+    renderTeacherDashboard();
+  }
+}
+
+function calcTotalScore(p) {
+  return Math.round(p.cash + (p.rep * 10));
+}
+
+function renderTeacherDashboard() {
+  const players = Object.values(appState.playersMap || {});
+  document.getElementById('total-players-count').textContent = players.length;
+
+  // 計算 5 組總分
+  const groupTotals = [1, 2, 3, 4, 5].map(g => {
+    const members = players.filter(p => Number(p.group) === g);
+    const sumScore = members.reduce((acc, m) => acc + calcTotalScore(m), 0);
+    return { group: g, count: members.length, totalScore: sumScore };
+  });
+
+  const sortedGroups = [...groupTotals].sort((a, b) => b.totalScore - a.totalScore);
+  const groupRankMap = {};
+  sortedGroups.forEach((g, idx) => {
+    groupRankMap[g.group] = g.totalScore > 0 ? idx + 1 : 99;
+  });
+
+  const groupContainer = document.getElementById('group-leaderboard');
+  groupContainer.innerHTML = groupTotals.map(g => {
+    const rank = groupRankMap[g.group];
+    let rankStyle = "bg-white border-pink-100";
+    let crown = "";
+    if (rank === 1) { rankStyle = "rank-1 border-2 shadow-md"; crown = "🥇 "; }
+    else if (rank === 2) { rankStyle = "rank-2 border-2"; crown = "🥈 "; }
+    else if (rank === 3) { rankStyle = "rank-3 border-2"; crown = "🥉 "; }
+
+    return `
+      <div class="rounded-2xl p-3.5 border ${rankStyle} flex flex-col justify-between transition-all">
+        <div class="flex justify-between items-center">
+          <span class="font-black text-gray-800 text-sm">${crown}第 ${g.group} 組</span>
+          <span class="text-[11px] bg-white/80 px-2 py-0.5 rounded-full text-gray-600 font-bold">${g.count} 人</span>
+        </div>
+        <div class="mt-3">
+          <div class="text-[11px] text-gray-500">集團累積總分</div>
+          <div class="text-xl font-black text-pink-700">${g.totalScore.toLocaleString()}</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // 若啟用「自動追蹤全班最新題」，找出目前最多人正在作答或最領先的回合
+  if (appState.autoFollowLead && players.length > 0) {
+    const activeRounds = players.map(p => Math.min(p.completedRounds || 0, ROUNDS.length - 1));
+    // 計算眾數（最多學生正在面對的題目）
+    const freq = {};
+    let bestRound = activeRounds[0];
+    let maxCount = 0;
+    activeRounds.forEach(rIdx => {
+      freq[rIdx] = (freq[rIdx] || 0) + 1;
+      if (freq[rIdx] > maxCount) {
+        maxCount = freq[rIdx];
+        bestRound = rIdx;
+      }
+    });
+    if (bestRound !== appState.spotlightIdx) {
+      appState.spotlightIdx = bestRound;
+      appState.showSpotlightAnswer = false;
+      document.getElementById('teacher-round-inspector').value = bestRound;
+    }
+  }
+  renderSpotlightScenario();
+
+  // 個人排行榜
+  const sortedPlayers = [...players].sort((a, b) => calcTotalScore(b) - calcTotalScore(a));
+  const tbody = document.getElementById('individual-leaderboard-body');
+
+  if (sortedPlayers.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" class="py-8 text-center text-gray-400">等待同學掃碼登入中...</td></tr>`;
+    document.getElementById('avg-progress-label').textContent = `全班平均進度：第 0 / 15 回合`;
+    return;
+  }
+
+  const avgRound = (players.reduce((acc, p) => acc + (p.completedRounds || 0), 0) / players.length).toFixed(1);
+  document.getElementById('avg-progress-label').textContent = `全班平均進度：第 ${avgRound} / 15 回合`;
+
+  tbody.innerHTML = sortedPlayers.slice(0, 15).map((p, idx) => {
+    const total = calcTotalScore(p);
+    const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}`;
+    const doneBadge = (p.completedRounds >= 15)
+      ? `<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 text-[11px] font-bold">已完賽</span>`
+      : `<span class="text-xs text-gray-600 font-medium">${p.completedRounds || 0}/15</span>`;
+
+    return `
+      <tr class="hover:bg-pink-50/40 transition">
+        <td class="py-2.5 px-2 font-black text-gray-700">${medal}</td>
+        <td class="py-2.5 px-2"><span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 text-xs font-bold">第${p.group}組</span></td>
+        <td class="py-2.5 px-2 font-bold text-gray-800">${escapeHtml(p.studentId)} <span class="text-pink-600 font-normal">(${escapeHtml(p.nickname)})</span></td>
+        <td class="py-2.5 px-2 text-center">${doneBadge}</td>
+        <td class="py-2.5 px-2 text-right font-semibold text-emerald-700">${p.cash.toLocaleString()}</td>
+        <td class="py-2.5 px-2 text-right font-semibold text-pink-600">${p.rep}</td>
+        <td class="py-2.5 px-2 text-right font-black text-gray-900">${total.toLocaleString()}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// ==========================================
+// 大螢幕「目前出題情境看板」控制邏輯
+// ==========================================
+function populateTeacherInspector() {
+  const select = document.getElementById('teacher-round-inspector');
+  select.innerHTML = ROUNDS.map((r, i) => `<option value="${i}">${r.title}</option>`).join('');
+  renderSpotlightScenario();
+}
+
+function manualInspectRound(idx) {
+  CozyAudioEngine.playSFX('click');
+  appState.autoFollowLead = false;
+  appState.spotlightIdx = Number(idx);
+  appState.showSpotlightAnswer = false;
+  updateAutoFollowBadge();
+  renderSpotlightScenario();
+}
+
+function stepSpotlightRound(delta) {
+  CozyAudioEngine.playSFX('click');
+  appState.autoFollowLead = false;
+  let next = appState.spotlightIdx + delta;
+  if (next < 0) next = 0;
+  if (next >= ROUNDS.length) next = ROUNDS.length - 1;
+  appState.spotlightIdx = next;
+  appState.showSpotlightAnswer = false;
+  document.getElementById('teacher-round-inspector').value = next;
+  updateAutoFollowBadge();
+  renderSpotlightScenario();
+}
+
+function enableAutoFollow() {
+  CozyAudioEngine.playSFX('click');
+  appState.autoFollowLead = true;
+  appState.showSpotlightAnswer = false;
+  updateAutoFollowBadge();
+  renderTeacherDashboard();
+}
+
+function updateAutoFollowBadge() {
+  const badge = document.getElementById('live-spotlight-mode-badge');
+  if (appState.autoFollowLead) {
+    badge.textContent = "🟢 自動追蹤全班最多人作答題目";
+    badge.className = "px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold";
+  } else {
+    badge.textContent = "📌 教師手動鎖定瀏覽中";
+    badge.className = "px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-bold";
+  }
+}
+
+function toggleSpotlightAnswer() {
+  CozyAudioEngine.playSFX('click');
+  appState.showSpotlightAnswer = !appState.showSpotlightAnswer;
+  renderSpotlightScenario();
+}
+
+function renderSpotlightScenario() {
+  const idx = appState.spotlightIdx;
+  const r = ROUNDS[idx];
+  const players = Object.values(appState.playersMap || {});
+  const countAtThisRound = players.filter(p => (p.completedRounds || 0) === idx).length;
+
+  document.getElementById('spotlight-stage').textContent = r.stage;
+  document.getElementById('spotlight-players-at-round').textContent = `目前有 ${countAtThisRound} 位同學正在此回合`;
+  document.getElementById('spotlight-title').textContent = r.title;
+  document.getElementById('spotlight-scenario').textContent = r.scenario;
+
+  const optContainer = document.getElementById('spotlight-options');
+  const ansBox = document.getElementById('spotlight-answer-box');
+  const ansPlaceholder = document.getElementById('spotlight-answer-placeholder');
+  const toggleBtn = document.getElementById('toggle-answer-btn');
+
+  if (appState.showSpotlightAnswer) {
+    ansBox.classList.remove('hidden');
+    ansPlaceholder.classList.add('hidden');
+    toggleBtn.textContent = "🙈 隱藏解答";
+  } else {
+    ansBox.classList.add('hidden');
+    ansPlaceholder.classList.remove('hidden');
+    toggleBtn.textContent = "👁️ 顯示解答（防劇透已隱藏）";
+  }
+
+  if (r.isDynamicEvent) {
+    optContainer.innerHTML = `
+      <div class="md:col-span-3 p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs md:text-sm font-bold">
+        ⚡ 此回合為「產業突發事件卡」，學生手機端將依據其品牌狀態跳出專屬應變選項！
+      </div>
+    `;
+    ansBox.innerHTML = `
+      <div class="font-bold text-amber-800">突發事件教學重點：</div>
+      <p class="text-gray-700 leading-relaxed">引導學生思考前期「市場口碑」累積的重要性，以及面對海關延誤等供應鏈風險時，採取替代包材或彈性調整（調適準則）的策略價值。</p>
+    `;
+  } else {
+    optContainer.innerHTML = r.options.map(opt => {
+      const highlight = (appState.showSpotlightAnswer && opt.correct)
+        ? "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold ring-2 ring-emerald-300"
+        : "border-gray-200 bg-white/90 text-gray-700";
+      return `
+        <div class="p-3 rounded-xl border ${highlight} text-xs md:text-sm leading-snug transition">
+          ${opt.text}
+        </div>
+      `;
+    }).join('');
+
+    const correctOpt = r.options.find(o => o.correct);
+    ansBox.innerHTML = `
+      <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+        <div class="font-black mb-1">✅ 最佳決策：${correctOpt.text}</div>
+        <p class="text-xs text-emerald-800 leading-relaxed">${correctOpt.feedback}</p>
+      </div>
+    `;
+  }
+}
+
+function simulateBots() {
+  CozyAudioEngine.playSFX('event');
+  const sampleNames = [
+    "信義美妝王", "積雪草女神", "專櫃小天后", "面膜大富翁", "安瓶煉金術", "香水收藏家",
+    "藥妝採購王", "跨境物流星", "沙龍主理人", "電商爆單王", "成分黨博士", "彩妝藝術家",
+    "快閃店達人", "通路策略師", "美肌實驗室", "皇室調香師", "醫美顧問團", "開架戰鬥機",
+    "奢華美學家", "綠色美妝派", "雙11不睡覺", "團購女王蜂", "保養品控", "精華液大亨",
+    "物流神調度", "品牌拓荒者", "肌底修護師", "時尚買手", "零售新星", "完美通路王"
+  ];
+  for (let i = 0; i < 30; i++) {
+    const group = (i % 5) + 1;
+    const completed = Math.floor(Math.random() * 6) + 5; // 模擬進行到第 5~10 回合
+    const cash = 1000 + (Math.floor(Math.random() * 12) - 2) * 100;
+    const rep = 50 + (Math.floor(Math.random() * 10) - 2) * 5;
+    const id = `bot_${i + 1}`;
+    appState.playersMap[id] = {
+      id,
+      studentId: `1120${String(i + 1).padStart(2, '0')}`,
+      nickname: sampleNames[i],
+      group,
+      cash,
+      rep,
+      completedRounds: completed
+    };
+  }
+  if (!useFirebase) {
+    try { localStorage.setItem('ch10_game_' + appState.roomCode, JSON.stringify(appState.playersMap)); } catch (e) {}
+  }
+  renderTeacherDashboard();
+}
+
+function clearRoomData() {
+  if (!confirm("確定要清空目前房間的所有選手分數紀錄嗎？")) return;
+  CozyAudioEngine.playSFX('click');
+  appState.playersMap = {};
+  if (useFirebase && dbRef) {
+    dbRef.remove();
+  } else {
+    localStorage.removeItem('ch10_game_' + appState.roomCode);
+  }
+  renderTeacherDashboard();
+}
+
+// ==========================================
+// 4. 學生登入與 15 回合策略闖關邏輯
+// ==========================================
+function showStudentJoin() {
+  CozyAudioEngine.playSFX('click');
+  hideAllViews();
+  appState.mode = 'student-join';
+  document.getElementById('view-student-join').classList.remove('hidden');
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const roomFromUrl = urlParams.get('room');
+  if (roomFromUrl) {
+    document.getElementById('student-room-input').value = roomFromUrl.toUpperCase();
+  }
+}
+
+function selectGroup(g) {
+  CozyAudioEngine.playSFX('click');
+  appState.selectedGroup = g;
+  document.querySelectorAll('.group-btn').forEach(btn => {
+    if (Number(btn.dataset.group) === g) {
+      btn.className = "group-btn py-2.5 rounded-xl border-2 border-pink-600 bg-pink-600 text-white font-black text-sm shadow-sm";
+    } else {
+      btn.className = "group-btn py-2.5 rounded-xl border-2 border-gray-200 bg-white text-gray-700 font-bold text-sm hover:border-pink-400";
+    }
+  });
+}
+
+function startStudentGame() {
+  const roomCode = document.getElementById('student-room-input').value.trim().toUpperCase() || 'MK2026';
+  const studentId = document.getElementById('student-id-input').value.trim();
+  const nickname = document.getElementById('student-nick-input').value.trim();
+
+  if (!appState.selectedGroup) {
+    alert("請先選擇你的所屬組別（第1～5組）！");
+    return;
+  }
+  if (!studentId) {
+    alert("請輸入你的學號！");
+    return;
+  }
+  if (!nickname) {
+    alert("請輸入自訂綽號或品牌名稱！");
+    return;
+  }
+
+  // 學生點擊開始遊戲時自動啟動療癒配樂
+  CozyAudioEngine.start();
+  CozyAudioEngine.playSFX('correct');
+
+  initSyncEngine(roomCode, '');
+
+  const playerId = `${appState.selectedGroup}_${studentId.replace(/[^a-zA-Z0-9]/g, '')}`;
+  appState.player = {
+    id: playerId,
+    studentId,
+    nickname,
+    group: appState.selectedGroup,
+    cash: 1000,
+    rep: 50,
+    completedRounds: 0,
+    history: []
+  };
+
+  savePlayerProgress(appState.player);
+
+  hideAllViews();
+  appState.mode = 'student-game';
+  document.getElementById('view-student-game').classList.remove('hidden');
+  updateStudentHUD();
+  renderCurrentRound();
+}
+
+function updateStudentHUD() {
+  const p = appState.player;
+  document.getElementById('hud-group-badge').textContent = `第 ${p.group} 組`;
+  document.getElementById('hud-player-name').textContent = `${p.studentId}・${p.nickname}`;
+  document.getElementById('hud-cash').textContent = `${p.cash.toLocaleString()} 萬`;
+  document.getElementById('hud-rep').textContent = `${p.rep} 分`;
+  document.getElementById('hud-total-score').textContent = calcTotalScore(p).toLocaleString();
+
+  const currentDisplayRound = Math.min(p.completedRounds + 1, 15);
+  document.getElementById('hud-round').textContent = `${currentDisplayRound} / 15`;
+  document.getElementById('hud-progress-bar').style.width = `${(p.completedRounds / 15) * 100}%`;
+}
+
+function renderCurrentRound() {
+  const p = appState.player;
+  if (p.completedRounds >= ROUNDS.length) {
+    showStudentEndScreen();
+    return;
+  }
+
+  const r = ROUNDS[p.completedRounds];
+  const card = document.getElementById('game-card-container');
+  const feedbackBox = document.getElementById('card-feedback');
+  const optionsBox = document.getElementById('card-options');
+
+  feedbackBox.classList.add('hidden');
+  optionsBox.innerHTML = '';
+
+  document.getElementById('card-stage-tag').textContent = r.stage;
+  document.getElementById('card-title').textContent = r.title;
+  document.getElementById('card-scenario').textContent = r.scenario;
+
+  if (r.type === 'event') {
+    CozyAudioEngine.playSFX('event');
+    card.classList.add('pulse-event', 'border-amber-400', 'border-2');
+    document.getElementById('card-type-tag').textContent = "⚡ 產業突發事件";
+    document.getElementById('card-type-tag').className = "px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-black";
+    renderDynamicEventOptions(r);
+  } else {
+    card.classList.remove('pulse-event', 'border-amber-400', 'border-2');
+    document.getElementById('card-type-tag').textContent = "📋 通路策略決策";
+    document.getElementById('card-type-tag').className = "px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold";
+
+    r.options.forEach((opt) => {
+      const btn = document.createElement('button');
+      btn.className = "option-card w-full text-left p-4 rounded-2xl border-2 border-gray-200 bg-white font-medium text-sm md:text-base text-gray-800 shadow-sm";
+      btn.textContent = opt.text;
+      btn.onclick = () => handleOptionSelect(r, opt, btn);
+      optionsBox.appendChild(btn);
+    });
+  }
+}
+
+function renderDynamicEventOptions(r) {
+  const p = appState.player;
+  const optionsBox = document.getElementById('card-options');
+  let dynamicOptions = [];
+
+  if (r.eventType === 'kol_boom') {
+    if (p.rep >= 55) {
+      dynamicOptions = [
+        {
+          text: "🌟 領取自然流量紅利！（目前口碑 ≥ 55 分，消費者主動搶購，資金 +200萬、口碑 +8分）",
+          cash: 200, rep: 8, correct: true,
+          feedback: "太棒了！因為你前兩回合精準掌握通路功能與通路流，口碑已達 55 分以上，成功免費承接 KOL 爆紅的自然流量紅利！"
+        }
+      ];
+    } else {
+      dynamicOptions = [
+        {
+          text: "🔥 逆轉方案：緊急砸 100 萬資金投廣蹭熱度（資金 -100萬，但口碑一口氣 +14 分大逆轉！）",
+          cash: -100, rep: 14, correct: true,
+          feedback: "漂亮的逆轉操作！雖然目前口碑未滿 55 分無法免費享受紅利，但你果斷投入資金打廣告，成功讓市場口碑大幅回升！"
+        },
+        {
+          text: "🐢 保守觀望：不花錢投廣，維持現狀（資金 +0萬、口碑 +2分）",
+          cash: 0, rep: 2, correct: true,
+          feedback: "你選擇保守保本，雖錯失爆紅波段，但也守住了手頭現金。"
+        }
+      ];
+    }
+  } else if (r.eventType === 'customs_delay') {
+    dynamicOptions = [
+      {
+        text: "♻️ 緊急應變：改用台灣在地環保補充瓶＋免運補償（口碑微降 -4分，但準時出貨大賺 +250萬！）",
+        cash: 250, rep: -4, correct: true,
+        feedback: "極具彈性的供應鏈應變！雖然臨時更換包裝讓少數 VIP 覺得不夠奢華（口碑 -4），但成功避免斷貨危機並賺進 250 萬資金！"
+      },
+      {
+        text: "⏳ 堅持等法國瓶子：延遲出貨兩週並賠償違約金（資金 -150萬、口碑 -6分）",
+        cash: -150, rep: -6, correct: false,
+        feedback: "缺乏調適彈性！在高度變動的通路環境中，死守單一進口包材導致全面斷貨與客訴，資金與口碑雙輸。"
+      }
+    ];
+  }
+
+  dynamicOptions.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = "option-card w-full text-left p-4 rounded-2xl border-2 border-amber-300 bg-amber-50/60 hover:bg-amber-100 font-bold text-sm md:text-base text-gray-800 shadow-sm";
+    btn.textContent = opt.text;
+    btn.onclick = () => handleOptionSelect(r, opt, btn);
+    optionsBox.appendChild(btn);
+  });
+}
+
+function handleOptionSelect(roundObj, opt, clickedBtn) {
+  CozyAudioEngine.playSFX(opt.correct ? 'correct' : 'wrong');
+
+  const allBtns = document.querySelectorAll('#card-options button');
+  allBtns.forEach(b => {
+    b.disabled = true;
+    b.classList.add('opacity-60');
+  });
+  clickedBtn.classList.remove('opacity-60');
+  clickedBtn.classList.add(opt.correct ? 'border-emerald-500' : 'border-rose-500', opt.correct ? 'bg-emerald-50' : 'bg-rose-50');
+
+  const p = appState.player;
+  p.cash = Math.max(0, p.cash + opt.cash);
+  p.rep = Math.max(0, p.rep + opt.rep);
+  p.completedRounds += 1;
+  p.history.push({
+    round: roundObj.round,
+    title: roundObj.title,
+    correct: opt.correct,
+    cashDelta: opt.cash,
+    repDelta: opt.rep
+  });
+
+  savePlayerProgress(p);
+  updateStudentHUD();
+
+  const feedbackBox = document.getElementById('card-feedback');
+  const badge = document.getElementById('feedback-badge');
+  const delta = document.getElementById('feedback-delta');
+  const exp = document.getElementById('feedback-explanation');
+  const nextBtn = document.getElementById('next-round-btn');
+
+  feedbackBox.classList.remove('hidden', 'bg-emerald-50', 'border-emerald-300', 'bg-rose-50', 'border-rose-300');
+  if (opt.correct) {
+    feedbackBox.classList.add('bg-emerald-50', 'border-emerald-300');
+    badge.textContent = roundObj.type === 'event' ? "⚡ 事件應變完成！" : "🎉 策略精準！";
+    badge.className = "font-black text-lg text-emerald-700";
+  } else {
+    feedbackBox.classList.add('bg-rose-50', 'border-rose-300');
+    badge.textContent = "💡 策略偏差，繳了學費！";
+    badge.className = "font-black text-lg text-rose-700";
+  }
+
+  const cashStr = opt.cash >= 0 ? `+${opt.cash}萬` : `${opt.cash}萬`;
+  const repStr = opt.rep >= 0 ? `+${opt.rep}分` : `${opt.rep}分`;
+  delta.innerHTML = `<span class="px-2 py-1 rounded bg-white shadow-sm text-gray-800">資金 ${cashStr} ｜ 口碑 ${repStr}</span>`;
+  exp.textContent = opt.feedback;
+
+  nextBtn.textContent = p.completedRounds >= 15 ? "查看最終結算報告 🏆" : `進入第 ${p.completedRounds + 1} 回合 →`;
+}
+
+function goNextRound() {
+  CozyAudioEngine.playSFX('click');
+  if (appState.player.completedRounds >= 15) {
+    showStudentEndScreen();
+  } else {
+    renderCurrentRound();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function showStudentEndScreen() {
+  CozyAudioEngine.playSFX('correct');
+  hideAllViews();
+  appState.mode = 'student-end';
+  document.getElementById('view-student-end').classList.remove('hidden');
+
+  const p = appState.player;
+  const total = calcTotalScore(p);
+
+  document.getElementById('end-player-info').textContent = `第 ${p.group} 組｜${p.studentId}・${p.nickname}`;
+  document.getElementById('end-total-score').textContent = total.toLocaleString();
+  document.getElementById('end-cash').textContent = `${p.cash.toLocaleString()} 萬`;
+  document.getElementById('end-rep').textContent = `${p.rep} 分`;
+
+  let rankTitle = "🌱 新銳美妝創業者";
+  if (total >= 3400) rankTitle = "👑 全球美妝通路帝國霸主";
+  else if (total >= 2800) rankTitle = "💎 頂級美妝通路戰略大師";
+  else if (total >= 2200) rankTitle = "✨ 連鎖美妝品牌營運總監";
+  document.getElementById('end-title-rank').textContent = `稱號：${rankTitle}`;
+
+  const list = document.getElementById('end-history-list');
+  list.innerHTML = p.history.map(h => {
+    const icon = h.correct ? "✅" : "❌";
+    const cStr = h.cashDelta >= 0 ? `+${h.cashDelta}` : `${h.cashDelta}`;
+    const rStr = h.repDelta >= 0 ? `+${h.repDelta}` : `${h.repDelta}`;
+    return `<li class="flex justify-between items-center border-b border-gray-100 pb-1.5">
+      <span>${icon} ${h.title}</span>
+      <span class="font-bold text-gray-600 shrink-0 ml-2">資金${cStr} / 口碑${rStr}</span>
+    </li>`;
+  }).join('');
+
+  try {
+    confetti({ particleCount: 90, spread: 70, origin: { y: 0.6 } });
+  } catch (e) {}
+}
+
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('room')) {
+    showStudentJoin();
+  }
+});
+</script>
+</body>
+</html>
