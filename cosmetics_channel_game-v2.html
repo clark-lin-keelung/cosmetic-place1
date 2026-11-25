@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head><script type='text/javascript' nonce='AIZ4QJM6I6xJHIVkiaVBww==' src='https://contribution.usercontent.google.com/mtkAVaJEtf6T2n8pxTmBGB6FCEtccE4ykET--ulY7gMzrL4uAwIVxIEUizdaW7tewfv2sQ-BSuTGDf0OTO5d0uNIm07HytfdAs_7fH3NcXE5J8IY0ZkDWyOqJ-dHWfbh2tWgr89T3InSm_N2E1qsVYT71TU5gf2e4b9kiRyKIBzbcJXRHSyRcHjztbM3HkWVSm55gfHrYCwuzLurNAZ4_ffBoVtMJm_BaJIso9HvImcRqeI8b-SW-oDhayvUDCaTRrdEgYVSqh-0GvwdHg3PZKRKgBBW6pUhG-UTFyazZBJARBenHCFzKfc9XPZQ7WzA3NRUJKIl-MA-e4EwylXcjsyTv_MRqz-FyhGBgp1-HOY4QCSXat5MV9D590aid5m70kBoQTK60hY_V0XnON8o66yqcFabNC-5pvUE5zHOvUU-ZWLXUkj9Ux756opghZDT_2yQ_z7nR400KEFa44glHCLZTKuwv-_xwj4CpjgllZ-qwj2gMY3m5Piv58rNhXLM52iWk-32aWdUUuny83552d27WbpC7p8T-MCPQaXkwNR-X0YhfsXtkaW68Y82MUFwygTe4CjDbRvlQQxyp6pnuhpbm-fqxjPbbjNZYA0Cj2wPPwQuzj5fLjm5B17nBs9K4oKhsxKgnZCs2Qnk-cp5dy5x8AaPJDeCAac_aIsT2sKFweltPnwZk_OYor-TT1_IR86w-oVR6DHAJ2jYcNuxO_BFHfypUPqZOlL6BLST4o8zaVk'></script>
+<head><script type='text/javascript' nonce='mrbLWEuwhiCkKSFxDuJDCw==' src='https://contribution.usercontent.google.com/ArfDWH54N_ASvzMQLz2-w8oQNYg4PA6_dkLaZWFf4t5RkUfvTYjsGFDm5guf2O1rSjjNwP200bNpy4MUEnkuh2kTZhbu4Am_fKFUdRh-l--8Fx0quC_DC5FKRSAF18Pf6SbkoNsu3B9nV1c8MOXimRohs6YX20QaNochgFjYeJz1QyxEVFNy_8FQzC9tmnstHAEq3vjBwtVKThxk6bGFbEiUxZ_rxayua6AZLN2rzhgab9pher_mL_uZPKAu04qbp-t3oqMhdgi8mqoXVkaNTKpZimLycfP4WuMH2Fo6O63h5xyT2_RElzzCGSO_bRBzATPW1NhQxK17LXh1un-OkKnXO515o_5WRVq7ltiBGTVJ-f9k45JGKsUf0nyA5KJ55K4ILifR51VZ9coO9OxqLB1kaj7sz4c0WmS-gRniNrXqQwVffKpu3OmOVRr6hY5FIgSDlgVonKp6s3hlZr1jcssnk6thJCzyloLIdYvuQfkoSJTEba8S8aBd4aF9qsv25QF3KxzLeFTWfTGX_dushAuZwGiLRfftzitqTz7VjUtlayYJsvlBkeMZr8oNtl1naAMHp6YGiOZSl4SaKTuo5PTxa3TI1xTX2uwO1-ABb4-B7rcdt_US_gd4B0MS7495Cs3a6BWdm-UVtL7c99PNp6DZjKQFyqdKWJO8a01AxTK_NqawzLi_Ex4vr7Z7RZbA0RgYMapThD66saQhKWAjT4TgsFyBGlBTRz5TO4HCnYs2oKY'></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>美妝品牌通路拓荒戰 v7｜Ch10 行銷通路與實體運配</title>
+<title>美妝品牌通路拓荒戰 v8｜Ch10 行銷通路與實體運配</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -73,7 +73,7 @@
       </div>
       <div>
         <h1 class="text-lg md:text-2xl font-black text-gray-800 tracking-tight">美妝品牌通路拓荒戰</h1>
-        <p class="text-xs text-pink-600 font-bold">Ch10 行銷通路與實體運配｜MQTT 雲端即時廣播同步版 v7</p>
+        <p class="text-xs text-pink-600 font-bold">Ch10 行銷通路與實體運配｜MQTT 雲端即時廣播＋防作弊隨機選項版 v8</p>
       </div>
     </div>
     <div class="flex flex-wrap items-center gap-2">
@@ -1488,7 +1488,7 @@ function openExplainSlide() {
       : "啟動替代包材（台灣在地環保補充瓶＋免運補償）確保準時出貨！";
   } else {
     const correctOpt = sampleBuilt.options.find(o => o.correct);
-    document.getElementById('slide-correct-answer').textContent = correctOpt.text;
+    document.getElementById('slide-correct-answer').textContent = correctOpt.text.replace(/^[A-D]\.\s*/, '');
   }
   document.getElementById('slide-theory-detail').textContent = sampleBuilt.explanation;
 
@@ -1775,10 +1775,21 @@ function renderStudentRoundCard(roundNum) {
     optionsList = built.options;
   }
 
-  optionsList.forEach(opt => {
+  // 防作弊機制：每位學生獨立隨機洗牌選項順序，並動態重新編排 A/B/C/D 代號
+  const shuffledOptions = [...optionsList];
+  for (let i = shuffledOptions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
+  }
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+  shuffledOptions.forEach((opt, idx) => {
     const btn = document.createElement('button');
     btn.className = "option-card w-full text-left p-3.5 rounded-2xl border-2 border-gray-200 bg-white font-medium text-sm text-gray-800 shadow-sm";
-    btn.textContent = opt.text;
+    // 若選項原本帶有 "A. "、"B. " 等前綴，洗牌後自動替換為對應新位置的 A/B/C/D 字母
+    const cleanText = opt.text.replace(/^[A-D]\.\s*/, '');
+    const displayText = rTemplate.isDynamicEvent ? opt.text : `${letters[idx]}. ${cleanText}`;
+    btn.textContent = displayText;
     btn.onclick = () => submitStudentAnswer(roundNum, rTemplate.title, opt, built.explanation, btn, false);
     optionsBox.appendChild(btn);
   });
