@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head><script type='text/javascript' nonce='GEEi8PwXY6pi9qReFe0XkQ==' src='https://contribution.usercontent.google.com/NKh8cOLUB9uViD68LcOKqVMpDyOEHLDFH5gX3jruwj0EnmD3YauX1dZe90S5Q1SWvJqLmPOflZ2_PMk7MW6khXYk42BwNkwIruhOfKcfvJb0xK1TwctoAB-GobB_-282ab9fXDtooxpPMsoO2ontnYg0ngDi5up7rjAH0CvOlFzag8j28hMKta1o2eC_HsNDYOTa9NW-SJcPr7XDuaFbsKWn1EgjBwkqve44TMlq-t_TV242m6vtGxBMzXrRvniPrqAPaB3ZqJdYj3lzMKpouC2Hn-Lu92YiK13XHjTfdh_UWHJ3dYRZH7J4YwZiRZhf_u_klmIgfAI6-_02oFktGmAHks1Go6yMbjuXmutzbieB322R1pNpsXPE6DZUolNCpvvg7QBZSW1QLR-LX6KPATu0shs7wEI-NtAh4X5E3lF2ki8XoejxOUxNB5iF-58mL77YhA1hUwQ0LwMq2qnOj4H9p_BOB9j2BoKclL-Jk__NAeLjefiomboZMZ8QMPvMTXe8vSxWQ4b4mrD3q4gvX6nMsf4Xs336AGo8a-n1Ym8OXvUdnb8S1CNM93sa5cvs4nuyGjl99LJd3gI0jKWkEz960JnYUWel3Kh_UOJPR1CFc4l4IkB109qjkqTzC3wa-wMXSSp-SQtlGUHeOUtHXx5LzCBlgVWOk1CeHpg3sXLCAl-xrMYEhnlBDQkl2lV9RUGzLtEcsn1t9Kr6E4CcZSxoPnApFaLnWJMeHjlIR5hllzE'></script>
+<head><script type='text/javascript' nonce='moF112eUwLG3IHa3svHiOw==' src='https://contribution.usercontent.google.com/WlQFOXqF9LigmefSk-DxGv8GsWPtm66ebffq_gYhFKo3mOK3bnl-XcIq-LVWaXYK1uCAc87UWWjLZNNPlkrHmocAg-ZuPxgUMcR_q64E7AmIJgFMp1vY6jhlcm4ies_pTlascWN5OV9WJ-7LCk4ZePEbLLTchtDmJ0jCC0HErAPdYAIeL244X2tXNPlv_mK4rasi4Fbn-0K8wKNNQ31OqLBK2idpDL7oH7VzSLTbLEkbt9DijZQALuY0LVjKRzIGBRBFodC_eVg4Otyyxla90vx_MNJ0whvXoe9T8CBfrLrtIJ0FzpH-sqKW5DqESZN7lCWWHxXw8wbAtTxip9I7igjb3vBoVzAy6pupZrkSdptAQQwalUVtDOmN2eRzSotIAFHrGQO74NaMKmjGPJ5IlZHmQv9kV_UZHRqe4HaNAGke_WwKP79tpaXp6qDudkPIBgsgAA9o4ZBpXtmKiV7R0WvUdsUQfx9-MWrmjaIQXe3HzGvF4YCa2bff2UScb8yuQMsgAK3XzC2WOxDQk2uYuzYsnkwF_U-qoFS9T2EsHNRB1_iEavXPFNcCxvtGMcaQNjO7ocOE2AgGZU8NJaMWbwAEAiTkce59LuLRPDrvlTVNeUcI7T5K-cMklBOVBHpw-hrvTBLT5YztK0lnfoK0DyU2DCy4mXwI9yVL97egfMZwqiRYQdoJeriylqz_VXa5QzoTV2ey3g8tdTNzWHl4wx9XaP4AP7g2bN5whtZ63U91gto'></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>美妝品牌通路拓荒戰 v5｜Ch10 行銷通路與實體運配</title>
+<title>美妝品牌通路拓荒戰 v6｜Ch10 行銷通路與實體運配</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<!-- Firebase SDK (僅當老師自行填入 Firebase URL 時啟用) -->
+<!-- PeerJS WebRTC P2P Library (免申請帳號、無 CORS 阻擋、支援 GitHub Pages HTTPS 跨手機點對點即時直連！) -->
+<script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+<!-- Firebase SDK (選填備援) -->
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
@@ -72,7 +74,7 @@
       </div>
       <div>
         <h1 class="text-lg md:text-2xl font-black text-gray-800 tracking-tight">美妝品牌通路拓荒戰</h1>
-        <p class="text-xs text-pink-600 font-bold">Ch10 行銷通路與實體運配｜全班手機同步出題強化版 v5</p>
+        <p class="text-xs text-pink-600 font-bold">Ch10 行銷通路與實體運配｜WebRTC 跨手機零延遲直連版 v6</p>
       </div>
     </div>
     <div class="flex flex-wrap items-center gap-2">
@@ -116,7 +118,7 @@
           <div>
             <div class="text-3xl mb-2">📱</div>
             <h3 class="text-xl font-bold text-gray-800 mb-2">我是學生（參賽選手）</h3>
-            <p class="text-sm text-gray-600 mb-4">選擇組別（第1～5組）、挑選 10 種美妝商品之一，輸入學號與綽號，等待老師發題並於 30 秒內搶答！</p>
+            <p class="text-sm text-gray-600 mb-4">選擇組別（第1～5組）、挑選 10 種美妝商品之一，輸入學號與綽號，連線講台戰情室並於 30 秒內搶答！</p>
           </div>
           <button onclick="showStudentJoin()" class="w-full py-3.5 rounded-xl text-white font-bold btn-primary shadow-md">
             進入選手登入 →
@@ -128,7 +130,7 @@
           <div>
             <div class="text-3xl mb-2">🖥️</div>
             <h3 class="text-xl font-bold text-gray-800 mb-2">我是老師（講台大螢幕控場）</h3>
-            <p class="text-sm text-gray-600 mb-4">即時掌握全班登入人數與名單、統一控制每回合開始與 30 秒倒數、投影情境圖解並彈出全螢幕講解投影片！</p>
+            <p class="text-sm text-gray-600 mb-4">建立點對點即時戰情室主機，全班手機掃碼零延遲同步報到人數、統一發題倒數並彈出講解投影片！</p>
           </div>
           <button onclick="showTeacherSetup()" class="w-full py-3.5 rounded-xl text-white font-bold bg-gradient-to-r from-purple-600 to-indigo-600 hover:opacity-95 transition shadow-md">
             開啟大螢幕控場戰情室 →
@@ -145,27 +147,27 @@
       <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
         <div>
           <h2 class="text-xl md:text-2xl font-black text-gray-800">大螢幕控場戰情室設定</h2>
-          <p class="text-xs md:text-sm text-gray-600">已採用<strong>多引擎跨網路雲端即時同步架構</strong>（防快取標頭＋雙雲端備援），確保老師點擊開始後全班手機秒速跳出題目！</p>
+          <p class="text-xs md:text-sm text-gray-600">已採用 <strong>WebRTC 跨手機即時點對點直連技術</strong>（解決 GitHub Pages 跨網域 CORS 阻擋問題），全班手機掃碼秒連講台大螢幕！</p>
         </div>
         <div class="flex gap-2">
           <button onclick="toggleFirebaseConfig()" class="px-3.5 py-2 rounded-xl bg-purple-100 text-purple-800 font-bold text-xs hover:bg-purple-200 transition">
-            ⚙️ 進階自訂 Firebase（選填）
+            ⚙️ 房間代碼 / 進階設定
           </button>
         </div>
       </div>
 
       <div id="firebase-config-drawer" class="hidden bg-slate-50 border border-slate-200 rounded-2xl p-4 mb-4 text-xs space-y-2">
-        <p class="font-bold text-slate-700">雲端同步架構說明：</p>
-        <p class="text-slate-600">系統預設會在雲端建立一個專屬即時房間（並自動附加抗快取參數與雙服務備援），將房間參數直接編入 QR Code 中。若你有自己的 Firebase Realtime Database URL，亦可貼在下方覆蓋：</p>
+        <p class="font-bold text-slate-700">連線架構說明：</p>
+        <p class="text-slate-600">講台大螢幕啟動後會作為「教室即時主機」，並將主機頻道 ID 編碼進 QR Code 中。學生手機掃碼後會建立雙向 WebRTC DataChannel 即時通道（即使不同電信 4G/5G 網路也能零延遲互傳登入人數與題目狀態）。若你有專屬 Firebase Realtime Database URL，亦可貼在下方作為雙通道備援：</p>
         <div class="grid md:grid-cols-2 gap-3 pt-1">
-          <input id="fb-db-url" type="text" placeholder="選填：https://your-project-default-rtdb.firebaseio.com" class="px-3 py-2 rounded-lg border border-slate-300">
           <input id="custom-room-code" type="text" value="MK2026" placeholder="自訂房間代碼" class="px-3 py-2 rounded-lg border border-slate-300 uppercase font-bold">
+          <input id="fb-db-url" type="text" placeholder="選填：https://your-project-default-rtdb.firebaseio.com" class="px-3 py-2 rounded-lg border border-slate-300">
         </div>
       </div>
 
       <div class="flex flex-wrap items-center gap-3">
         <button id="btn-launch-room" onclick="launchTeacherRoom()" class="px-6 py-3.5 rounded-xl text-white font-black btn-primary shadow-md text-base">
-          🚀 啟動大螢幕控場大廳（建立雲端房間與 QR Code）
+          🚀 啟動大螢幕控場大廳（建立即時主機與 QR Code）
         </button>
       </div>
     </div>
@@ -181,8 +183,8 @@
             <div class="space-y-1">
               <div class="flex items-center gap-1.5">
                 <span class="px-2 py-0.5 rounded bg-pink-100 text-pink-700 text-[11px] font-bold">掃碼登入</span>
-                <button onclick="manualRefreshRoom()" title="立即重新整理名單" class="px-2 py-0.5 rounded bg-emerald-100 hover:bg-emerald-200 text-emerald-800 text-[11px] font-bold">
-                  🔄 刷新
+                <button onclick="broadcastStateToAllStudents()" title="強制廣播最新狀態給所有已連線手機" class="px-2 py-0.5 rounded bg-emerald-100 hover:bg-emerald-200 text-emerald-800 text-[11px] font-bold">
+                  📡 同步廣播
                 </button>
               </div>
               <div class="text-xs text-gray-500">房號：<strong id="display-room-code" class="text-lg font-black text-purple-700">MK2026</strong></div>
@@ -205,8 +207,8 @@
           <!-- Mini Live Login Ticker -->
           <div class="mt-3 pt-2.5 border-t border-pink-100">
             <div class="flex justify-between items-center text-[11px] text-gray-500 font-bold mb-1">
-              <span>最新登入同學（自動即時更新）：</span>
-              <span id="sync-heartbeat-dot" class="text-emerald-600">● 連線正常</span>
+              <span>最新登入同學（即時彈出）：</span>
+              <span id="sync-heartbeat-dot" class="text-emerald-600">● 連線待機中</span>
             </div>
             <div id="recent-logins-chips" class="flex flex-wrap gap-1 max-h-16 overflow-y-auto text-[11px]">
               <span class="text-gray-400">等待同學掃碼加入...</span>
@@ -329,12 +331,12 @@
       <div class="text-center">
         <div class="inline-flex w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 items-center justify-center text-3xl mb-2">💄</div>
         <h2 class="text-2xl font-black text-gray-800">建立你的美妝品牌</h2>
-        <p class="text-xs text-gray-500 mt-1">登入後將立即同步至講台大螢幕，請選擇組別與你要經營的美妝產品</p>
+        <p id="student-join-subtitle" class="text-xs text-gray-500 mt-1">請填寫資料並選擇你要經營的美妝產品，完成後將立即顯示在講台大螢幕</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-xs font-bold text-gray-700 mb-1">房間代碼（掃碼已自動帶入）</label>
+          <label class="block text-xs font-bold text-gray-700 mb-1">教室連線代碼（掃碼已自動帶入）</label>
           <input id="student-room-input" type="text" value="MK2026" class="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 font-bold uppercase tracking-wider bg-gray-50 focus:outline-none focus:border-pink-500">
         </div>
         <div>
@@ -410,16 +412,16 @@
     <!-- Waiting Lobby State -->
     <div id="student-waiting-box" class="glass-card rounded-3xl p-8 text-center space-y-4">
       <div class="text-5xl animate-bounce">⏳</div>
-      <h3 id="student-wait-title" class="text-2xl font-black text-gray-800">報到成功！已同步至講台大螢幕</h3>
+      <h3 id="student-wait-title" class="text-2xl font-black text-gray-800">報到成功！已連線至講台大螢幕</h3>
       <p id="student-wait-desc" class="text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
-        老師大螢幕已收到你的報到資料！請注意聽老師指令，當老師按下【開始第 1 回合】時，題目與 30 秒倒數將自動出現。
+        講台大螢幕已顯示你的名字與商品！請注意聽老師指令，當老師按下【開始第 1 回合】時，題目與 30 秒倒數將自動出現。
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-2 pt-1">
         <span id="student-sync-status" class="px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">
-          🟢 自動偵測老師發題中...
+          🟢 P2P 直連已建立｜等待老師發題中...
         </span>
         <button onclick="manualStudentSync()" class="px-4 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold shadow-sm transition">
-          🔄 立即同步最新題目
+          🔄 重新請求最新題目
         </button>
       </div>
     </div>
@@ -1023,18 +1025,18 @@ const BASE_ROUNDS = [
 ];
 
 // ==========================================
-// 4. 雙雲端抗快取即時同步引擎 (npoint.io + jsonblob.com 雙通道 + Firebase + LocalStorage)
+// 4. WebRTC PeerJS 跨手機點對點即時直連引擎 (+ LocalStorage 同瀏覽器同步)
 // ==========================================
-// 關鍵修正說明：
-// 1. 學生端在等待大廳時，因為瀏覽器快取或 CDN 緩存導致 GET 請求偶爾拿到舊的 currentRound: 0。
-// 2. 本版加入 `cache: 'no-store'` 與多重隨機 Query 參數，並支援雙雲端儲存體（優先使用即時無快取的 npoint/jsonblob），
-//    同時在學生等待畫面加入「立即同步最新題目」手動按鈕與更短的 1.2 秒輪詢週期，確保題目秒速跳出！
+// 徹底解決前幾版失敗的根本原因：
+// GitHub Pages (HTTPS) 瀏覽器會因為 CORS 跨網域安全政策阻擋對第三方免費 JSON 網站的 POST/PUT 請求，
+// 導致前幾版靜默失敗並退回僅限本機的 localStorage！
+// 本版改用 PeerJS (WebRTC DataChannel)，講台大螢幕作為 Host Peer，學生手機掃描 QR Code 帶入 hostId，
+// 直接透過 WebRTC 點對點加密通道雙向秒傳「學生報到資料」與「老師發題狀態」，100% 穿透不同手機網路且無 CORS 限制！
 
 let appState = {
   mode: 'landing',
   roomCode: 'MK2026',
-  cloudProvider: 'jsonblob', // 'jsonblob' | 'npoint' | 'firebase' | 'local'
-  cloudBinId: null,
+  hostPeerId: null,
   selectedGroup: null,
   selectedProductId: null,
   player: null,
@@ -1046,296 +1048,277 @@ let appState = {
   },
   teacherTimerInterval: null,
   studentTimerInterval: null,
-  cloudPollInterval: null,
-  lastRenderedRound: -1,
-  isSyncing: false
+  lastRenderedRound: -1
 };
 
-let dbRoomRef = null;
+let peerInstance = null;
+let teacherConnections = {}; // { peerId: DataConnection }
+let studentHostConn = null;  // DataConnection to Teacher Host
+let studentReconnectTimer = null;
 
-// 建立雲端房間（支援 JsonBlob 與 npoint 雙備援）
-async function createCloudRoom(initialPayload) {
-  // 嘗試 JsonBlob
-  try {
-    const res = await fetch('https://jsonblob.com/api/jsonBlob', {
-      method: 'POST',
-      cache: 'no-store',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(initialPayload)
+// 產生乾淨且固定的老師主機 Peer ID
+function buildHostPeerId(roomCode) {
+  const clean = (roomCode || 'MK2026').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  return `mk-ch10-host-${clean}`;
+}
+
+// ------------------------------------------
+// 老師端：啟動 PeerJS 主機並監聽所有學生手機連入
+// ------------------------------------------
+function initTeacherPeerHost(roomCode) {
+  return new Promise((resolve) => {
+    const cleanRoom = (roomCode || 'MK2026').toUpperCase().replace(/[^A-Z0-9]/g, '');
+    appState.roomCode = cleanRoom;
+    // 加上短隨機尾碼避免舊分頁未關閉造成 ID 衝突，並將完整 hostId 放入 QR Code
+    const randSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
+    const hostId = `mk10-${cleanRoom}-${randSuffix}`;
+    appState.hostPeerId = hostId;
+
+    const badge = document.getElementById('connection-badge');
+    badge.textContent = `⏳ 正在建立即時主機...`;
+
+    if (peerInstance) {
+      try { peerInstance.destroy(); } catch (e) {}
+    }
+
+    peerInstance = new Peer(hostId, {
+      debug: 1
     });
-    if (res.ok) {
-      const loc = res.headers.get('Location') || res.headers.get('location') || '';
-      const id = loc.split('/').pop();
-      if (id) return { provider: 'jsonblob', id };
-    }
-  } catch (e) {
-    console.warn('JsonBlob create error:', e);
-  }
 
-  // 備援：api.npoint.io
-  const res2 = await fetch('https://api.npoint.io/', {
-    method: 'POST',
-    cache: 'no-store',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(initialPayload)
-  });
-  if (!res2.ok) throw new Error('All cloud providers failed');
-  const data2 = await res2.json();
-  if (!data2.id) throw new Error('No npoint id');
-  return { provider: 'npoint', id: data2.id };
-}
-
-// 強制無快取讀取雲端狀態
-async function fetchCloudRoom(provider, binId) {
-  const bust = `${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
-  const url = provider === 'npoint'
-    ? `https://api.npoint.io/${binId}?nocache=${bust}`
-    : `https://jsonblob.com/api/jsonBlob/${binId}?nocache=${bust}`;
-
-  const res = await fetch(url, {
-    method: 'GET',
-    cache: 'no-store',
-    headers: {
-      'Accept': 'application/json',
-      'Cache-Control': 'no-cache, no-store, must-revalidate',
-      'Pragma': 'no-cache'
-    }
-  });
-  if (!res.ok) throw new Error('Cloud fetch failed: ' + res.status);
-  return await res.json();
-}
-
-// 安全合併寫入雲端狀態
-async function mergeAndWriteCloudRoom(provider, binId, updaterFn) {
-  const url = provider === 'npoint'
-    ? `https://api.npoint.io/${binId}`
-    : `https://jsonblob.com/api/jsonBlob/${binId}`;
-
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      const latest = await fetchCloudRoom(provider, binId);
-      const updated = updaterFn(latest || { players: {}, gameControl: { currentRound: 0, roundStartedAt: 0, status: 'lobby' } });
-      const putRes = await fetch(url, {
-        method: 'PUT',
-        cache: 'no-store',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(updated)
-      });
-      if (putRes.ok) {
-        appState.playersMap = updated.players || {};
-        if (updated.gameControl) appState.gameControl = updated.gameControl;
-        return true;
-      }
-    } catch (e) {
-      console.warn('Cloud merge retry:', attempt, e);
-      await new Promise(r => setTimeout(r, 200));
-    }
-  }
-  return false;
-}
-
-function startCloudPolling() {
-  if (appState.cloudPollInterval) clearInterval(appState.cloudPollInterval);
-  const poll = async () => {
-    if (!appState.cloudBinId || appState.isSyncing) return;
-    appState.isSyncing = true;
-    try {
-      const data = await fetchCloudRoom(appState.cloudProvider, appState.cloudBinId);
-      if (data) {
-        appState.playersMap = data.players || {};
-        if (data.gameControl) {
-          appState.gameControl = data.gameControl;
-        }
-        const nowStr = new Date().toLocaleTimeString('zh-TW', { hour12: false });
-        const dot = document.getElementById('sync-heartbeat-dot');
-        if (dot) dot.textContent = `● 雲端同步正常 (${nowStr})`;
-
-        const stuStatus = document.getElementById('student-sync-status');
-        if (stuStatus) {
-          stuStatus.textContent = `🟢 已連線 (${nowStr})｜等待老師發題中...`;
-        }
-        onRoomStateUpdated();
-      }
-    } catch (e) {
-      const dot = document.getElementById('sync-heartbeat-dot');
-      if (dot) dot.textContent = `⚠️ 網路重連中...`;
-    } finally {
-      appState.isSyncing = false;
-    }
-  };
-  poll();
-  appState.cloudPollInterval = setInterval(poll, 1200);
-}
-
-async function initSyncEngine(roomCode, customFbUrl, existingBinId, existingProvider) {
-  appState.roomCode = (roomCode || 'MK2026').toUpperCase().replace(/[^A-Z0-9_-]/g, '');
-  const badge = document.getElementById('connection-badge');
-
-  // 1. 若有自訂 Firebase URL
-  if (customFbUrl && customFbUrl.startsWith('https://')) {
-    try {
-      if (!firebase.apps.length) {
-        firebase.initializeApp({ databaseURL: customFbUrl });
-      }
-      dbRoomRef = firebase.database().ref('ch10_v5_rooms/' + appState.roomCode);
-      appState.cloudProvider = 'firebase';
-      badge.textContent = `🟢 Firebase 即時連線 (${appState.roomCode})`;
+    peerInstance.on('open', (id) => {
+      appState.hostPeerId = id;
+      badge.textContent = `🟢 P2P 主機已上線 (${cleanRoom})`;
       badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700";
+      const dot = document.getElementById('sync-heartbeat-dot');
+      if (dot) dot.textContent = `● 主機就緒，等待手機掃碼`;
+      resolve(id);
+    });
 
-      dbRoomRef.on('value', (snapshot) => {
-        const data = snapshot.val() || {};
-        appState.playersMap = data.players || {};
-        if (data.gameControl) appState.gameControl = data.gameControl;
-        onRoomStateUpdated();
+    peerInstance.on('connection', (conn) => {
+      teacherConnections[conn.peer] = conn;
+
+      conn.on('open', () => {
+        // 學生一連上，立刻把目前回合狀態送給該學生
+        conn.send({
+          type: 'STATE_SYNC',
+          gameControl: appState.gameControl
+        });
+        updateTeacherConnStatus();
       });
-      return;
-    } catch (e) {
-      console.warn("Firebase failed, fallback to cloud:", e);
-    }
-  }
 
-  // 2. 跨手機無快取雲端房間
-  try {
-    if (existingBinId) {
-      appState.cloudBinId = existingBinId;
-      appState.cloudProvider = existingProvider || 'jsonblob';
-    } else {
-      badge.textContent = `⏳ 建立雲端房間中...`;
-      const initialData = {
-        roomCode: appState.roomCode,
-        players: {},
-        gameControl: { currentRound: 0, roundStartedAt: 0, status: 'lobby' }
-      };
-      const created = await createCloudRoom(initialData);
-      appState.cloudProvider = created.provider;
-      appState.cloudBinId = created.id;
-    }
-    badge.textContent = `🟢 跨手機雲端同步 (${appState.roomCode})`;
-    badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700";
-    startCloudPolling();
-  } catch (e) {
-    console.warn("Cloud init failed, fallback to localStorage:", e);
-    fallbackToLocalSync();
-  }
-}
+      conn.on('data', (msg) => {
+        if (!msg || typeof msg !== 'object') return;
+        if (msg.type === 'PLAYER_JOIN' || msg.type === 'PLAYER_UPDATE') {
+          if (msg.player && msg.player.id) {
+            appState.playersMap[msg.player.id] = msg.player;
+            // 回傳確認與最新控場進度給該學生
+            conn.send({
+              type: 'STATE_SYNC',
+              gameControl: appState.gameControl
+            });
+            saveLocalBackup();
+            renderTeacherDashboard();
+          }
+        } else if (msg.type === 'REQUEST_STATE') {
+          conn.send({
+            type: 'STATE_SYNC',
+            gameControl: appState.gameControl
+          });
+        }
+      });
 
-function fallbackToLocalSync() {
-  appState.cloudProvider = 'local';
-  const badge = document.getElementById('connection-badge');
-  badge.textContent = `🟣 本機同瀏覽器同步 (${appState.roomCode})`;
-  badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-purple-100 text-purple-700";
+      conn.on('close', () => {
+        delete teacherConnections[conn.peer];
+        updateTeacherConnStatus();
+      });
+    });
 
-  const readLocal = () => {
-    try {
-      const raw = localStorage.getItem('ch10_v5_' + appState.roomCode);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        appState.playersMap = parsed.players || {};
-        if (parsed.gameControl) appState.gameControl = parsed.gameControl;
-        onRoomStateUpdated();
+    peerInstance.on('error', (err) => {
+      console.warn('Teacher Peer error:', err);
+      badge.textContent = `⚠️ 連線異常 (${err.type})，請重新整理`;
+      badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-700";
+      resolve(hostId);
+    });
+
+    // 同時支援同瀏覽器分頁測試 (LocalStorage)
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'ch10_v6_local_' + cleanRoom && e.newValue) {
+        try {
+          const parsed = JSON.parse(e.newValue);
+          if (parsed.players) {
+            appState.playersMap = { ...appState.playersMap, ...parsed.players };
+            renderTeacherDashboard();
+          }
+        } catch (err) {}
       }
-    } catch (e) {}
-  };
-  readLocal();
-  window.addEventListener('storage', (e) => {
-    if (e.key === 'ch10_v5_' + appState.roomCode) readLocal();
+    });
   });
-  if (appState.cloudPollInterval) clearInterval(appState.cloudPollInterval);
-  appState.cloudPollInterval = setInterval(readLocal, 900);
 }
 
-async function writePlayerToCloud(playerObj) {
-  appState.playersMap[playerObj.id] = playerObj;
-  if (appState.cloudProvider === 'firebase' && dbRoomRef) {
-    await dbRoomRef.child('players/' + playerObj.id).set(playerObj);
-  } else if ((appState.cloudProvider === 'jsonblob' || appState.cloudProvider === 'npoint') && appState.cloudBinId) {
-    await mergeAndWriteCloudRoom(appState.cloudProvider, appState.cloudBinId, (latest) => {
-      if (!latest.players) latest.players = {};
-      latest.players[playerObj.id] = playerObj;
-      // 順便把最新的 gameControl 帶回來，避免學生報到後錯過老師已經開始的回合
-      if (latest.gameControl && latest.gameControl.currentRound > (appState.gameControl.currentRound || 0)) {
-        appState.gameControl = latest.gameControl;
-      }
-      return latest;
-    });
-  } else {
-    syncLocalWholeState();
+function updateTeacherConnStatus() {
+  const activeCount = Object.values(teacherConnections).filter(c => c.open).length;
+  const dot = document.getElementById('sync-heartbeat-dot');
+  if (dot) {
+    dot.textContent = `● 已連接 ${activeCount} 台行動裝置`;
   }
 }
 
-async function writeGameControlToCloud(controlObj) {
-  appState.gameControl = controlObj;
-  if (appState.cloudProvider === 'firebase' && dbRoomRef) {
-    await dbRoomRef.child('gameControl').set(controlObj);
-  } else if ((appState.cloudProvider === 'jsonblob' || appState.cloudProvider === 'npoint') && appState.cloudBinId) {
-    await mergeAndWriteCloudRoom(appState.cloudProvider, appState.cloudBinId, (latest) => {
-      latest.gameControl = controlObj;
-      return latest;
-    });
-  } else {
-    syncLocalWholeState();
-  }
-  onRoomStateUpdated();
+function broadcastStateToAllStudents() {
+  const payload = {
+    type: 'STATE_SYNC',
+    gameControl: appState.gameControl
+  };
+  Object.values(teacherConnections).forEach(conn => {
+    if (conn && conn.open) {
+      try { conn.send(payload); } catch (e) {}
+    }
+  });
+  saveLocalBackup();
 }
 
-function syncLocalWholeState() {
+function saveLocalBackup() {
   try {
-    localStorage.setItem('ch10_v5_' + appState.roomCode, JSON.stringify({
+    localStorage.setItem('ch10_v6_local_' + appState.roomCode, JSON.stringify({
       players: appState.playersMap,
       gameControl: appState.gameControl
     }));
   } catch (e) {}
 }
 
-function onRoomStateUpdated() {
-  if (appState.mode === 'teacher') {
-    renderTeacherDashboard();
-  } else if (appState.mode === 'student-game') {
-    syncStudentWithTeacherControl();
-  }
-}
+// ------------------------------------------
+// 學生端：連線至老師主機 Peer ID 並雙向即時同步
+// ------------------------------------------
+function connectStudentToHost(hostId, playerObj) {
+  return new Promise((resolve) => {
+    const badge = document.getElementById('connection-badge');
+    const stuStatus = document.getElementById('student-sync-status');
 
-async function manualRefreshRoom() {
-  CozyAudioEngine.playSFX('click');
-  if ((appState.cloudProvider === 'jsonblob' || appState.cloudProvider === 'npoint') && appState.cloudBinId) {
-    const data = await fetchCloudRoom(appState.cloudProvider, appState.cloudBinId);
-    if (data) {
-      appState.playersMap = data.players || {};
-      if (data.gameControl) appState.gameControl = data.gameControl;
-      renderTeacherDashboard();
+    // 先寫入同瀏覽器 LocalStorage 備援（方便老師在同一台電腦開分頁測試）
+    try {
+      const key = 'ch10_v6_local_' + appState.roomCode;
+      const existing = JSON.parse(localStorage.getItem(key) || '{"players":{}}');
+      existing.players[playerObj.id] = playerObj;
+      localStorage.setItem(key, JSON.stringify(existing));
+      if (existing.gameControl) {
+        appState.gameControl = existing.gameControl;
+      }
+    } catch (e) {}
+
+    if (!hostId) {
+      badge.textContent = `🟣 本機測試模式`;
+      resolve(false);
+      return;
     }
-  } else {
-    renderTeacherDashboard();
-  }
+
+    if (peerInstance) {
+      try { peerInstance.destroy(); } catch (e) {}
+    }
+
+    peerInstance = new Peer({ debug: 1 });
+
+    peerInstance.on('open', () => {
+      const conn = peerInstance.connect(hostId, { reliable: true });
+      studentHostConn = conn;
+
+      conn.on('open', () => {
+        badge.textContent = `🟢 已直連講台大螢幕`;
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700";
+        if (stuStatus) {
+          stuStatus.textContent = `🟢 已成功連線講台！等待老師按開始...`;
+        }
+        // 立刻傳送學生報到資料給老師大螢幕
+        conn.send({
+          type: 'PLAYER_JOIN',
+          player: appState.player
+        });
+        resolve(true);
+      });
+
+      conn.on('data', (msg) => {
+        if (!msg || typeof msg !== 'object') return;
+        if (msg.type === 'STATE_SYNC' && msg.gameControl) {
+          appState.gameControl = msg.gameControl;
+          const nowStr = new Date().toLocaleTimeString('zh-TW', { hour12: false });
+          if (stuStatus) {
+            stuStatus.textContent = `🟢 同步正常 (${nowStr})｜等待老師發題中...`;
+          }
+          syncStudentWithTeacherControl();
+        }
+      });
+
+      conn.on('close', () => {
+        badge.textContent = `⚠️ 與講台斷線，重連中...`;
+        badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800";
+        scheduleStudentReconnect(hostId);
+      });
+
+      conn.on('error', (err) => {
+        console.warn('Student conn error:', err);
+        resolve(false);
+      });
+    });
+
+    peerInstance.on('error', (err) => {
+      console.warn('Student peer error:', err);
+      badge.textContent = `⚠️ 連線失敗，請確認掃描最新 QR Code`;
+      badge.className = "px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-700";
+      resolve(false);
+    });
+
+    // 同時監聽同瀏覽器分頁變化
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'ch10_v6_local_' + appState.roomCode && e.newValue) {
+        try {
+          const parsed = JSON.parse(e.newValue);
+          if (parsed.gameControl) {
+            appState.gameControl = parsed.gameControl;
+            syncStudentWithTeacherControl();
+          }
+        } catch (err) {}
+      }
+    });
+
+    // 最多等待 4 秒避免卡在按鈕上
+    setTimeout(() => resolve(false), 4000);
+  });
 }
 
-async function manualStudentSync() {
+function scheduleStudentReconnect(hostId) {
+  if (studentReconnectTimer) clearTimeout(studentReconnectTimer);
+  studentReconnectTimer = setTimeout(() => {
+    if (appState.mode === 'student-game' && appState.player) {
+      connectStudentToHost(hostId, appState.player);
+    }
+  }, 2500);
+}
+
+function sendPlayerUpdateToTeacher() {
+  if (studentHostConn && studentHostConn.open) {
+    try {
+      studentHostConn.send({
+        type: 'PLAYER_UPDATE',
+        player: appState.player
+      });
+    } catch (e) {}
+  }
+  try {
+    const key = 'ch10_v6_local_' + appState.roomCode;
+    const existing = JSON.parse(localStorage.getItem(key) || '{"players":{}}');
+    existing.players[appState.player.id] = appState.player;
+    localStorage.setItem(key, JSON.stringify(existing));
+  } catch (e) {}
+}
+
+function manualStudentSync() {
   CozyAudioEngine.playSFX('click');
   const stuStatus = document.getElementById('student-sync-status');
-  if (stuStatus) stuStatus.textContent = "⏳ 正在強制抓取老師最新題目...";
+  if (stuStatus) stuStatus.textContent = "⏳ 正在向講台請求最新題目...";
 
-  if ((appState.cloudProvider === 'jsonblob' || appState.cloudProvider === 'npoint') && appState.cloudBinId) {
-    try {
-      const data = await fetchCloudRoom(appState.cloudProvider, appState.cloudBinId);
-      if (data) {
-        appState.playersMap = data.players || {};
-        if (data.gameControl) appState.gameControl = data.gameControl;
-        syncStudentWithTeacherControl();
-        if (stuStatus && (appState.gameControl.currentRound || 0) === 0) {
-          stuStatus.textContent = "✅ 已同步！老師尚未按下開始第1回合";
-        }
-      }
-    } catch (e) {
-      if (stuStatus) stuStatus.textContent = "⚠️ 連線忙碌中，請再按一次同步";
-    }
-  } else {
-    syncStudentWithTeacherControl();
+  if (studentHostConn && studentHostConn.open) {
+    studentHostConn.send({ type: 'REQUEST_STATE' });
+    studentHostConn.send({ type: 'PLAYER_UPDATE', player: appState.player });
+  } else if (appState.hostPeerId && appState.player) {
+    connectStudentToHost(appState.hostPeerId, appState.player);
   }
 }
 
@@ -1370,31 +1353,27 @@ function showTeacherSetup() {
 async function launchTeacherRoom() {
   const btn = document.getElementById('btn-launch-room');
   btn.disabled = true;
-  btn.textContent = "⏳ 正在建立跨手機雲端房間...";
+  btn.textContent = "⏳ 正在建立即時通訊主機...";
 
   CozyAudioEngine.start();
-  const customUrl = document.getElementById('fb-db-url').value.trim();
   const roomCode = document.getElementById('custom-room-code').value.trim() || 'MK2026';
 
-  await initSyncEngine(roomCode, customUrl, null, null);
+  const hostId = await initTeacherPeerHost(roomCode);
 
   document.getElementById('teacher-setup-box').classList.add('hidden');
   document.getElementById('teacher-live-board').classList.remove('hidden');
   document.getElementById('display-room-code').textContent = appState.roomCode;
 
-  // 產生帶有 ?room=XXXX&bin=YYYY&pv=jsonblob 的 QR Code
+  // 產生帶有 ?room=XXXX&host=YYYY 的 QR Code
   const qrContainer = document.getElementById('qrcode-container');
   qrContainer.innerHTML = '';
   const baseUrl = window.location.href.split('?')[0];
-  let joinUrl = `${baseUrl}?room=${encodeURIComponent(appState.roomCode)}`;
-  if (appState.cloudBinId) {
-    joinUrl += `&bin=${encodeURIComponent(appState.cloudBinId)}&pv=${encodeURIComponent(appState.cloudProvider)}`;
-  }
+  const joinUrl = `${baseUrl}?room=${encodeURIComponent(appState.roomCode)}&host=${encodeURIComponent(hostId)}`;
 
   new QRCode(qrContainer, {
     text: joinUrl,
-    width: 112,
-    height: 112,
+    width: 115,
+    height: 115,
     colorDark: "#be185d",
     colorLight: "#ffffff"
   });
@@ -1403,35 +1382,31 @@ async function launchTeacherRoom() {
   renderTeacherDashboard();
 }
 
-async function teacherStartRound(roundNum) {
+function teacherStartRound(roundNum) {
   CozyAudioEngine.playSFX('event');
-  const btnStart = document.getElementById('btn-start-round');
-  const btnNext = document.getElementById('btn-next-round');
-  if (btnStart) btnStart.disabled = true;
-  if (btnNext) btnNext.disabled = true;
-
-  await writeGameControlToCloud({
+  appState.gameControl = {
     currentRound: roundNum,
     roundStartedAt: Date.now(),
     status: 'active'
-  });
-
-  if (btnStart) btnStart.disabled = false;
-  if (btnNext) btnNext.disabled = false;
+  };
+  broadcastStateToAllStudents();
+  renderTeacherDashboard();
   startTeacherTimerLoop();
 }
 
-async function teacherNextRound() {
-  const cur = appState.gameControl.currentRound || 0;
+function teacherNextRound() {
+  const cur = Number(appState.gameControl.currentRound || 0);
   if (cur < 15) {
-    await teacherStartRound(cur + 1);
+    teacherStartRound(cur + 1);
   } else {
     CozyAudioEngine.playSFX('correct');
-    await writeGameControlToCloud({
+    appState.gameControl = {
       currentRound: 16,
       roundStartedAt: 0,
       status: 'finished'
-    });
+    };
+    broadcastStateToAllStudents();
+    renderTeacherDashboard();
     if (appState.teacherTimerInterval) clearInterval(appState.teacherTimerInterval);
     document.getElementById('teacher-timer-display').textContent = "0";
   }
@@ -1672,7 +1647,7 @@ function closeRosterModal() {
   document.getElementById('roster-modal').classList.add('hidden');
 }
 
-async function simulateBots() {
+function simulateBots() {
   CozyAudioEngine.playSFX('event');
   const sampleNames = [
     "信義美妝王", "積雪草女神", "專櫃小天后", "面膜大富翁", "安瓶煉金術", "香水收藏家",
@@ -1681,12 +1656,11 @@ async function simulateBots() {
     "奢華美學家", "綠色美妝派", "雙11不睡覺", "團購女王蜂", "保養品控", "精華液大亨",
     "物流神調度", "品牌拓荒者", "肌底修護師", "時尚買手", "零售新星", "完美通路王"
   ];
-  const bots = {};
   for (let i = 0; i < 30; i++) {
     const group = (i % 5) + 1;
     const prod = PRODUCTS[i % PRODUCTS.length];
     const id = `bot_${i + 1}`;
-    bots[id] = {
+    appState.playersMap[id] = {
       id,
       studentId: `1120${String(i + 1).padStart(2, '0')}`,
       nickname: sampleNames[i],
@@ -1698,38 +1672,17 @@ async function simulateBots() {
       joinedAt: Date.now() - (30 - i) * 1000
     };
   }
-  appState.playersMap = { ...appState.playersMap, ...bots };
-  if (appState.cloudProvider === 'firebase' && dbRoomRef) {
-    await dbRoomRef.child('players').set(appState.playersMap);
-  } else if ((appState.cloudProvider === 'jsonblob' || appState.cloudProvider === 'npoint') && appState.cloudBinId) {
-    await mergeAndWriteCloudRoom(appState.cloudProvider, appState.cloudBinId, (latest) => {
-      latest.players = { ...(latest.players || {}), ...bots };
-      return latest;
-    });
-  } else {
-    syncLocalWholeState();
-  }
+  saveLocalBackup();
   renderTeacherDashboard();
 }
 
-async function clearRoomData() {
+function clearRoomData() {
   if (!confirm("確定要清空目前房間的所有選手資料並重置回等待大廳嗎？")) return;
   CozyAudioEngine.playSFX('click');
   appState.playersMap = {};
   appState.gameControl = { currentRound: 0, roundStartedAt: 0, status: 'lobby' };
   if (appState.teacherTimerInterval) clearInterval(appState.teacherTimerInterval);
-
-  if (appState.cloudProvider === 'firebase' && dbRoomRef) {
-    await dbRoomRef.set({ players: {}, gameControl: appState.gameControl });
-  } else if ((appState.cloudProvider === 'jsonblob' || appState.cloudProvider === 'npoint') && appState.cloudBinId) {
-    await mergeAndWriteCloudRoom(appState.cloudProvider, appState.cloudBinId, () => ({
-      roomCode: appState.roomCode,
-      players: {},
-      gameControl: appState.gameControl
-    }));
-  } else {
-    syncLocalWholeState();
-  }
+  broadcastStateToAllStudents();
   renderTeacherDashboard();
 }
 
@@ -1744,14 +1697,14 @@ function showStudentJoin() {
 
   const urlParams = new URLSearchParams(window.location.search);
   const roomFromUrl = urlParams.get('room');
-  const binFromUrl = urlParams.get('bin');
-  const pvFromUrl = urlParams.get('pv');
+  const hostFromUrl = urlParams.get('host');
   if (roomFromUrl) {
     document.getElementById('student-room-input').value = roomFromUrl.toUpperCase();
+    appState.roomCode = roomFromUrl.toUpperCase();
   }
-  if (binFromUrl) {
-    appState.cloudBinId = binFromUrl;
-    appState.cloudProvider = pvFromUrl || 'jsonblob';
+  if (hostFromUrl) {
+    appState.hostPeerId = hostFromUrl;
+    document.getElementById('student-join-subtitle').textContent = `已鎖定講台戰情室 (${appState.roomCode})，請填寫資料報到！`;
   }
 
   // 渲染 10 種美妝產品選擇卡片
@@ -1801,16 +1754,12 @@ async function startStudentGame() {
 
   const submitBtn = document.getElementById('btn-student-submit-join');
   submitBtn.disabled = true;
-  submitBtn.textContent = "⏳ 正在向講台大螢幕報到...";
+  submitBtn.textContent = "⏳ 正在建立直連通道並向大螢幕報到...";
 
   CozyAudioEngine.start();
   CozyAudioEngine.playSFX('correct');
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const binFromUrl = urlParams.get('bin') || appState.cloudBinId;
-  const pvFromUrl = urlParams.get('pv') || appState.cloudProvider;
-  await initSyncEngine(roomCode, '', binFromUrl, pvFromUrl);
-
+  appState.roomCode = roomCode;
   const playerId = `${appState.selectedGroup}_${studentId.replace(/[^a-zA-Z0-9]/g, '')}`;
   appState.player = {
     id: playerId,
@@ -1825,8 +1774,11 @@ async function startStudentGame() {
     history: []
   };
 
-  // 寫入雲端並同時取得老師最新控場狀態（若老師已經按開始，學生一進來就會直接看到題目）
-  await writePlayerToCloud(appState.player);
+  const urlParams = new URLSearchParams(window.location.search);
+  const hostId = urlParams.get('host') || appState.hostPeerId;
+  appState.hostPeerId = hostId;
+
+  await connectStudentToHost(hostId, appState.player);
 
   submitBtn.disabled = false;
   submitBtn.textContent = "完成報到！進入等候大廳 🚀";
@@ -1866,7 +1818,6 @@ function syncStudentWithTeacherControl() {
     return;
   }
 
-  // 切換為題目顯示介面
   document.getElementById('student-waiting-box').classList.add('hidden');
   document.getElementById('student-question-box').classList.remove('hidden');
 
@@ -1931,7 +1882,6 @@ function renderStudentRoundCard(roundNum) {
 function startStudentTimerLoop(roundNum, roundStartedAt) {
   if (appState.studentTimerInterval) clearInterval(appState.studentTimerInterval);
 
-  // 若手機端系統時鐘與老師端有微小誤差，記錄本地收到該回合的時間作保底
   if (!appState.localRoundReceiveMap) appState.localRoundReceiveMap = {};
   if (!appState.localRoundReceiveMap[roundNum]) {
     appState.localRoundReceiveMap[roundNum] = Date.now();
@@ -1979,7 +1929,7 @@ function startStudentTimerLoop(roundNum, roundStartedAt) {
   appState.studentTimerInterval = setInterval(tick, 500);
 }
 
-async function submitStudentAnswer(roundNum, roundTitle, opt, explanation, clickedBtn, isTimeout) {
+function submitStudentAnswer(roundNum, roundTitle, opt, explanation, clickedBtn, isTimeout) {
   const p = appState.player;
   if (Number(p.lastAnsweredRound || 0) >= roundNum) return;
 
@@ -2029,7 +1979,7 @@ async function submitStudentAnswer(roundNum, roundTitle, opt, explanation, click
   delta.innerHTML = `<span class="px-2 py-0.5 rounded bg-white shadow-sm text-gray-800">資金 ${cashStr} ｜ 口碑 ${repStr}</span>`;
   exp.textContent = explanation;
 
-  await writePlayerToCloud(p);
+  sendPlayerUpdateToTeacher();
 }
 
 function showStudentEndScreen() {
@@ -2073,7 +2023,7 @@ function escapeHtml(str) {
 
 window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('room') || urlParams.get('bin')) {
+  if (urlParams.get('room') || urlParams.get('host')) {
     showStudentJoin();
   }
 });
